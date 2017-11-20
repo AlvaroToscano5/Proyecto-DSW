@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Entidades.EquipoEntity>
+
+@{
+    ViewBag.Title = "ListarE";
+}
+
+<h2>Equipos de Transporte</h2>
+
+<p>
+    @Html.ActionLink("Registrar Equipo", "RegistrarE") |
+    @Html.ActionLink("Regresar", "")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Código")
+        </th>
+        <th>
+            @Html.DisplayName("Descripción")
+        </th>
+        <th>
+            @Html.DisplayName("Placa")
+        </th>
+        <th>
+            @Html.DisplayName("Fecha de Registro")
+        </th>
+        <th>
+            @Html.DisplayName("Fecha de Actualización")
+        </th>
+        <th>
+            @Html.DisplayName("Proveedor")
+        </th>
+        <th>
+            @Html.DisplayName("Tipo")
+        </th>
+        <th>
+            @Html.DisplayName("Estado")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.placa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaReg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaAct)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.proveedor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estado)
+        </td>
+        <td>
+            @Html.ActionLink("Actualizar", "ActualizarE", new { id=item.codigo })
+        </td>
+    </tr>
+}
+
+</table>

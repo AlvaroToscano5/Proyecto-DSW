@@ -1,0 +1,92 @@
+﻿@model IEnumerable<Entidades.ProveedorEntity>
+
+@{
+    ViewBag.Title = "Listar";
+}
+
+<h2>Proveedores</h2>
+
+<p>
+    @Html.ActionLink("Registrar Proveedor", "Registrar") |
+    @Html.ActionLink("Regresar", "")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Código")
+        </th>
+        <th>
+            @Html.DisplayName("RUC")
+        </th>
+        <th>
+            @Html.DisplayName("Razón Social")
+        </th>
+        <th>
+            @Html.DisplayName("Representante Legal")
+        </th>
+        <th>
+            @Html.DisplayName("Dirección")
+        </th>
+        <th>
+            @Html.DisplayName("Teléfono")
+        </th>
+        <th>
+            @Html.DisplayName("Correo")
+        </th>
+        <th>
+            @Html.DisplayName("Fecha de Registro")
+        </th>
+        <th>
+            @Html.DisplayName("Fecha de Actualización")
+        </th>
+        <th>
+            @Html.DisplayName("Cta Bancaria")
+        </th>
+        <th>
+            @Html.DisplayName("País")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ruc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.razSocial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.repLegal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.correo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaReg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaAct)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ctaBancaria)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pais)
+        </td>
+        <td>
+            @Html.ActionLink("Actualizar", "Actualizar", new { id=item.codigo })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,117 @@
+﻿@model IEnumerable<Entidades.EmpleadoEntity>
+
+@{
+    ViewBag.Title = "Listar";
+}
+
+<h2>Empleados</h2>
+
+<p>
+    @Html.ActionLink("Registrar Empleado", "Registrar") |
+    @Html.ActionLink("Regresar", "")
+
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Código")
+        </th>
+        <th>
+            @Html.DisplayName("DNI")
+        </th>
+        <th>
+            @Html.DisplayName("Nombre")
+        </th>
+        <th>
+            @Html.DisplayName("Apellidos")
+        </th>
+        <th>
+            @Html.DisplayName("Sexo")
+        </th>
+        <th>
+            @Html.DisplayName("Correo")
+        </th>
+        <th>
+            @Html.DisplayName("Edad")
+        </th>
+        <th>
+            @Html.DisplayName("Dirección")
+        </th>
+        <th>
+            @Html.DisplayName("Teléfono")
+        </th>
+        <th>
+            @Html.DisplayName("Fecha de Registro")
+        </th>
+        <th>
+            @Html.DisplayName("Fecha de Actualización")
+        </th>
+        <th>
+            @Html.DisplayName("Tipo")
+        </th>
+        <th>
+            @Html.DisplayName("Estado")
+        </th>
+        <th>
+            @Html.DisplayName("Estación")
+        </th>
+        <th>
+            @Html.DisplayName("Área")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dni)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apellidos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sexo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.correo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.edad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaReg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaAct)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.area)
+        </td>
+        <td>
+            @Html.ActionLink("Actualizar", "Actualizar", new { id=item.codigo })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Entidades.UsuarioEntity>
+
+@{
+    ViewBag.Title = "ListarCaja";
+}
+
+<h2>Usuarios</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Código")
+        </th>
+        <th>
+            @Html.DisplayName("DNI ")
+        </th>
+        <th>
+            @Html.DisplayName("Nombre ")
+        </th>
+        <th>
+            @Html.DisplayName("Apellidos ")
+        </th>
+        <th>
+            @Html.DisplayName("Tipo")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dni)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apellidos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipo)
+        </td>
+        <td>
+            @Html.ActionLink("Actualizar", "ActualizarTipo", new { id=item.codigo})
+        </td>
+    </tr>
+}
+
+</table>
