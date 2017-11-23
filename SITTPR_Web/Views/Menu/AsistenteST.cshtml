@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "AsistenteST";
+}
+
+<h2>AsistenteST</h2>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+<script>
+    if ('@ViewBag.mensaje' != '')
+        alert('@ViewBag.mensaje')
+</script>

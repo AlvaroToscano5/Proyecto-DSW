@@ -11,7 +11,7 @@ namespace Servicios {
     public class EmpleadoService {
         empleadoDAO empleado = new empleadoDAO();
 
-        public DataTable iniciarSesion(String usuario, String contraseña) {
+        public string iniciarSesion(String usuario, String contraseña) {
             return empleado.iniciarSesion(usuario, contraseña);
         }
 

@@ -11,7 +11,53 @@ namespace DAO {
     public class empleadoDAO {
         conexionDAO cn = new conexionDAO();
 
-        public DataTable iniciarSesion(String usuario, String contraseña) {
+        public string iniciarSesion(String usuario, String contraseña) {
+            DataTable dt = new DataTable();
+            string m = "";
+            string acceso = "";
+            cn.getcn.Open();
+
+            try {
+                SqlCommand cmd = new SqlCommand("usp_IniciarSesion", cn.getcn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@USU", usuario);
+                cmd.Parameters.AddWithValue("@PSS", contraseña);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                da.Fill(dt);
+            }
+            catch (SqlException ex) { m = ex.Message; }
+            finally { cn.getcn.Close(); }
+
+            DataTable emp = credenciales(usuario, contraseña);
+
+            if (dt.Rows.Count == 1) {
+                if (dt.Rows[0][0].ToString() == "EEU01") {
+                    if (dt.Rows[0][1].ToString() == emp.Rows[0][1].ToString()) {
+                        if (dt.Rows[0][2].ToString() == emp.Rows[0][2].ToString()) {
+                            switch (emp.Rows[0][2].ToString()) {
+                                case "TE001": acceso = "Administrador"; break;
+                                case "TE002": acceso = "GerenteGeneral"; break;
+                                case "TE003": acceso = "AsistenteRRHH"; break;
+                                case "TE004": acceso = "GerenteRRHH"; break;
+                                case "TE005": acceso = "AsistenteDC"; break;
+                                case "TE006": acceso = "GerenteDC"; break;
+                                case "TE007": acceso = "AsistenteST"; break;
+                                case "TE008": acceso = "GerenteST"; break;
+                                case "TE009": acceso = "AsistenteCAU"; break;
+                                case "TE010": acceso = "GerenteCAU"; break;
+                                case "TE011": acceso = "Cajero"; break;
+                            }
+                        } else { acceso = "Error"; }
+                    } else { acceso = "Error"; }
+                } else { acceso = "Inactivo"; }
+            } else { acceso = "Error"; }
+
+            return acceso;
+        }
+
+        public DataTable credenciales(string usuario, String contraseña) {
             DataTable dt = new DataTable();
             string m = "";
             cn.getcn.Open();
@@ -31,7 +77,7 @@ namespace DAO {
 
             return dt;
         }
-        
+
         public string generarCodigo() {
             DataTable dt = new DataTable();
             string m = "";
