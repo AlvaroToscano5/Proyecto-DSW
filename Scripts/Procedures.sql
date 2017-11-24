@@ -268,3 +268,6 @@ BEGIN
 INSERT INTO RECARGA VALUES (@COD, @MON, @FRG, @DNI, @USU)
 END
 GO
+
+exec usp_ListarRecarga
+go
