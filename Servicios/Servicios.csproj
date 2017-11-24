@@ -49,6 +49,7 @@
     <Compile Include="PaisService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProveedorService.cs" />
+    <Compile Include="RecargaService.cs" />
     <Compile Include="TipoService.cs" />
     <Compile Include="UsuarioService.cs" />
   </ItemGroup>

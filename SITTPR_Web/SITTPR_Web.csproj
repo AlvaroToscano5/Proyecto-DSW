@@ -172,6 +172,7 @@
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\MobiliarioEquipoController.cs" />
     <Compile Include="Controllers\ProveedorController.cs" />
+    <Compile Include="Controllers\RecargaController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -248,6 +249,7 @@
     <Content Include="Views\Menu\GerenteCAU.cshtml" />
     <Content Include="Views\Menu\Cajero.cshtml" />
     <Content Include="Views\Menu\Login.cshtml" />
+    <Content Include="Views\Recarga\Recargar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
