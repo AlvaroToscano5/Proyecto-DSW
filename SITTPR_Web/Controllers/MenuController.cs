@@ -6,8 +6,7 @@ using System.Web.Mvc;
 using Entidades;
 using Servicios;
 
-namespace SITTPR_Web.Controllers
-{
+namespace SITTPR_Web.Controllers {
     public class MenuController : Controller {
         EmpleadoService empleado = new EmpleadoService();
 

@@ -5,3 +5,10 @@ C:\Users\i201510050\Desktop\Proyecto DSW\DAO\bin\Debug\Entidades.dll
 C:\Users\i201510050\Desktop\Proyecto DSW\DAO\bin\Debug\Entidades.pdb
 C:\Users\i201510050\Desktop\Proyecto DSW\DAO\obj\Debug\DAO.dll
 C:\Users\i201510050\Desktop\Proyecto DSW\DAO\obj\Debug\DAO.pdb
+C:\Users\i201510050\Desktop\Proyecto-DSW-PII\DAO\bin\Debug\DAO.dll
+C:\Users\i201510050\Desktop\Proyecto-DSW-PII\DAO\bin\Debug\DAO.pdb
+C:\Users\i201510050\Desktop\Proyecto-DSW-PII\DAO\bin\Debug\Entidades.dll
+C:\Users\i201510050\Desktop\Proyecto-DSW-PII\DAO\bin\Debug\Entidades.pdb
+C:\Users\i201510050\Desktop\Proyecto-DSW-PII\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\i201510050\Desktop\Proyecto-DSW-PII\DAO\obj\Debug\DAO.dll
+C:\Users\i201510050\Desktop\Proyecto-DSW-PII\DAO\obj\Debug\DAO.pdb

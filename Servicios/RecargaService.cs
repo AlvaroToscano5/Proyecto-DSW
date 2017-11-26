@@ -11,6 +11,10 @@ namespace Servicios {
     public class RecargaService {
         recargaDAO recarga = new recargaDAO();
 
+        public string generarCodigo() {
+            return recarga.generarCodigo();
+        }
+
         public string recargar(RecargaEntity rec) {
             return recarga.recargar(rec);
         }
