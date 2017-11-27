@@ -186,10 +186,16 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\estilos.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="imagenes\empleado.png" />
+    <Content Include="imagenes\recargar.png" />
+    <Content Include="imagenes\reclamo.png" />
+    <Content Include="imagenes\reporte.png" />
+    <Content Include="imagenes\tipo.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
