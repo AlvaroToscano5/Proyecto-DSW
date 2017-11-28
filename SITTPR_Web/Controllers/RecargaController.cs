@@ -19,13 +19,21 @@ namespace SITTPR_Web.Controllers {
 
         [HttpPost]
         public ActionResult Recargar(RecargaEntity rec) {
-            rec.codigo = recarga.generarCodigo();
-            rec.fechaReg = DateTime.Now.ToShortDateString().ToString();
+            string msg = "";
 
-            UsuarioEntity reg = usuario.listar().Where(u => u.dni == rec.dni).FirstOrDefault();
+            if (usuario.listar().Where(u => u.dni == rec.dni).Count() != 0) {
+                rec.codigo = recarga.generarCodigo();
+                rec.fechaReg = DateTime.Now.ToShortDateString().ToString();
 
-            rec.usuario = reg.codigo;
-            string msg = recarga.recargar(rec);
+                UsuarioEntity reg = usuario.listar().Where(u => u.dni == rec.dni).FirstOrDefault();
+
+                rec.usuario = reg.codigo;
+                msg = recarga.recargar(rec);
+            } else {
+                msg = "Dni Ingresado, No Existe";
+            }
+
+            
             return RedirectToAction("Recargar", "Recarga", new { mensaje = msg });
         }
     }
