@@ -116,3 +116,24 @@ INSERT INTO EMPLEADO VALUES ('E000000009', '45789630', 'Marcos César', 'Carrión 
 INSERT INTO EMPLEADO VALUES ('E000000010', '78954301', 'María Alicia', 'Toscano Norabuena', 'Femenino', 'a', 30, 'a', 'a', 'mtoscano', '1234', '30/10/2017', 'a', 'TE010', 'EEU01', 'E0001', 'A0004')
 INSERT INTO EMPLEADO VALUES ('E000000011', '59876224', 'Germán Erick', 'Medina Ochoa', 'Masculino', 'a', 21, 'a', 'a', 'gmedina', '8888', '30/10/2017', 'a', 'TE011', 'EEU01', 'E0001', 'A0005')
 GO
+
+INSERT INTO PROVEEDOR VALUES ('P000000001', '20754562698', 'Rail SAC', 'Fernando Zegarra Pinto', 'Av. Larco 845 - Miraflores', '014789563', 'fzegarra@rail.com', '30/10/2017', null, '4561-4589-4789-2659-0147', 'P0001')
+INSERT INTO PROVEEDOR VALUES ('P000000002', '20458965478', 'Security SRL', 'Eder Suarez Medina', 'Av. Canaval y Moreyra 452 - San Isidro', '012658954', 'esuarez@security.com', '30/10/2017', null, '4789-5632-4856-4785-0152', 'P0001')
+INSERT INTO PROVEEDOR VALUES ('P000000003', '20478956317', 'BusFast SAC', 'Sofia Zavaleta Rodriguez', 'Av. San Borja Nte 759 - San Borja', '014736198', 'szavaleta@busfast.com', '30/10/2017', null, '4852-3596-1245-7895-0148', 'P0003')
+INSERT INTO PROVEEDOR VALUES ('P000000004', '10458795631', 'Elevator SAC', 'Jorge Salas Andrade', 'Av Arequipa 1052 - Lince', '012547896', 'jsalas@elevator.com', '30/10/2017', null, '4589-6325-9874-8569-1248', 'P0002')
+GO
+
+INSERT INTO EQUIPO VALUES ('E000000001', 'Tren 15x3 Rojo', 'KJGH-9565', '30/10/2017', null, 'P000000001', 'TEM02', 'EEM01')
+INSERT INTO EQUIPO VALUES ('E000000002', 'Bus 10x2', 'KJGH-9565', '30/10/2017', null, 'P000000003', 'TEM02', 'EEM01')
+GO
+
+INSERT INTO MOBILIARIO VALUES ('M000000001', 'Cámaras de Seguridad', 50, '30/10/2017', null, 'P000000002', 'TEM02', 'EEM01', 'E0001')
+INSERT INTO MOBILIARIO VALUES ('M000000002', 'Ascensores', 4, '30/10/2017', null, 'P000000004', 'TEM02', 'EEM01', 'E0001')
+GO
+
+INSERT INTO USUARIO VALUES ('U000000001', '75456269', 'Alvaro Alonso', 'Laveriano Toscano', 'Masculino', 20, 'Peruano', 'alaveriano', '5597', 0.0, '30/10/2017', '30/10/2017', 'TU004', 'EEU01', null)
+INSERT INTO USUARIO VALUES ('U000000002', '07397636', 'Maria Alicia', 'Toscano Norabuena', 'Femenino', 35, 'Peruano', 'mtoscano', '1234', 0.0, '30/10/2017', '30/10/2017', 'TU001', 'EEU01', null)
+INSERT INTO USUARIO VALUES ('U000000003', '07414075', 'Jorge Enrique', 'Toscano Norabuena', 'Masculino', 40, 'Peruano', 'jtoscano', '1111', 0.0, '30/10/2017', '30/10/2017', 'TU001', 'EEU01', null)
+INSERT INTO USUARIO VALUES ('U000000004', '75489632', 'Rodrigo Manuel', 'DelaFuente Carrion', 'Masculino', 21, 'Peruano', 'rdelafuente', '2222', 0.0, '30/10/2017', '30/10/2017', 'TU003', 'EEU01', null)
+INSERT INTO USUARIO VALUES ('U000000005', '01478596', 'Luis Miguel', 'Pinto Zea', 'Masculino', 31, 'Peruano', 'lpinto', '3333', 0.0, '30/10/2017', '30/10/2017', 'TU001', 'EEU01', null)
+GO
