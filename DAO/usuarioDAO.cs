@@ -84,7 +84,7 @@ namespace DAO {
                     reg.nacionalidad = dr[6].ToString();
                     reg.usuario = dr[7].ToString();
                     reg.contraseña = dr[8].ToString();
-                    reg.saldo = Convert.ToDouble(dr[9]);
+                    reg.saldo = Convert.ToDecimal(dr[9]);
                     reg.fechaReg = dr[10].ToString();
                     reg.fechaAct = dr[11].ToString();
                     reg.tipo = dr[12].ToString();

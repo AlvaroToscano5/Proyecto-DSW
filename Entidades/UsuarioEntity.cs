@@ -15,7 +15,7 @@ namespace Entidades {
         public string nacionalidad { get; set; }
         public string usuario { get; set; }
         public string contraseña { get; set; }
-        public double saldo { get; set; }
+        public decimal saldo { get; set; }
         public string fechaReg { get; set; }
         public string fechaAct { get; set; }
         public string tipo { get; set; }

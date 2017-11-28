@@ -53,7 +53,7 @@ namespace DAO {
             return codigo;
         }
         
-        public string actualizarSaldo(double monto, string dni) {
+        public string actualizarSaldo(decimal monto, string dni) {
             string m = "";
             cn.getcn.Open();
 

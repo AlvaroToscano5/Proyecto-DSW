@@ -10,7 +10,7 @@ namespace Entidades
         public string codigo { get; set; }
         public int cantidad { get; set; }
         public string fechaReg { get; set; }
-        public double monto { get; set; }
+        public decimal monto { get; set; }
         public string tipo { get; set; }
     }
 }

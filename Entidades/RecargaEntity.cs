@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Entidades {
     public class RecargaEntity {
-        public String codigo { get; set; }
-        public double monto { get; set; }
-        public String fechaReg { get; set; }
-        public String dni { get; set; }
-        public String usuario { get; set; }
+        public string codigo { get; set; }
+        public decimal monto { get; set; }
+        public string fechaReg { get; set; }
+        public string dni { get; set; }
+        public string usuario { get; set; }
     }
 }

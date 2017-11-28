@@ -33,7 +33,7 @@ namespace SITTPR_Web.Controllers {
             reg.codigo = usuario.generarCodigo();
             reg.usuario = usuario.generarUsuario(reg.nombre, reg.apellidos);
             reg.contraseña = reg.dni;
-            reg.saldo = 0.00;
+            reg.saldo = 0;
             reg.fechaReg = DateTime.Now.ToShortDateString().ToString();
             reg.fechaAct = DateTime.Now.ToShortDateString().ToString();
             reg.estado = "EEU01";
