@@ -24,35 +24,34 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.dniUsuario, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.dni, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.dniUsuario, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.dniUsuario, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.dni, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.dni, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.nombreUsuario, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.nombre, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.nombreUsuario, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.nombreUsuario, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.apellidoUsuario, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.apellido, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.apellidoUsuario, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.apellidoUsuario, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.apellido, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.apellido, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.tipoUsuario, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.tipo, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @*@Html.DropDownList("reclamo", (SelectList)ViewBag.reclamo, htmlAttributes: new { @class = "form-control" })*@
-                @Html.EditorFor(model => model.tipoUsuario, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.tipoUsuario, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.tipo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.tipo, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -61,6 +60,14 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.fechaReg, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.fechaReg, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.fechaAct, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.fechaAct, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.fechaAct, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -106,21 +113,16 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Enviar" class="btn btn-default" />
+                <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Regresar a Lista", "ListarE")
+    @Html.ActionLink("Back to List", "Index")
 </div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
-
-<script>
-    if ('@ViewBag.mensaje' != '')
-        alert('@ViewBag.mensaje')
-</script>

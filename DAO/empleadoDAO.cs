@@ -153,8 +153,8 @@ namespace DAO {
                     reg.telefono = dr[8].ToString();
                     reg.usuario = dr[9].ToString();
                     reg.contraseña = dr[10].ToString();
-                    reg.fechaReg = dr[11].ToString();
-                    reg.fechaAct = dr[12].ToString();
+                    reg.fechaReg = Convert.ToDateTime(dr[11]);
+                    reg.fechaAct = Convert.ToDateTime(dr[12]);
                     reg.tipo = dr[13].ToString();
                     reg.estado = dr[14].ToString();
                     reg.estacion = dr[15].ToString();

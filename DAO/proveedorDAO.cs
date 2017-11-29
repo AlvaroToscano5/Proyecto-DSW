@@ -76,8 +76,8 @@ namespace DAO {
                     reg.direccion = dr[4].ToString();
                     reg.telefono = dr[5].ToString();
                     reg.correo = dr[6].ToString();
-                    reg.fechaReg = dr[7].ToString();
-                    reg.fechaAct = dr[8].ToString();
+                    reg.fechaReg = Convert.ToDateTime(dr[7]);
+                    reg.fechaAct = Convert.ToDateTime(dr[8]);
                     reg.ctaBancaria = dr[9].ToString();
                     reg.pais = dr[10].ToString();
                     lista.Add(reg);

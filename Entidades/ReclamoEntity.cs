@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 namespace Entidades {
     public class ReclamoEntity {
         public string codigo { get; set; }
-        public string dniUsuario { get; set; }
-        public string nombreUsuario { get; set; }
-        public string apellidoUsuario { get; set; }
-        public string tipoUsuario { get; set; }
-        public string fechaReg { get; set; }
+        public string dni{ get; set; }
+        public string nombre { get; set; }
+        public string apellido { get; set; }
+        public string tipo{ get; set; }
+        public DateTime fechaReg { get; set; }
+        public DateTime fechaAct { get; set; }
         public string estado { get; set; }
         public string descripcion { get; set; }
         public string usuario { get; set; }

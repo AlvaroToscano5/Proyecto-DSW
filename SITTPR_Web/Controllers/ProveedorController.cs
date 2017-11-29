@@ -26,8 +26,8 @@ namespace SITTPR_Web.Controllers {
         [HttpPost]
         public ActionResult Registrar(ProveedorEntity reg) {
             reg.codigo = proveedor.generarCodigo();
-            reg.fechaReg = DateTime.Now.ToShortDateString().ToString();
-            reg.fechaAct = DateTime.Now.ToShortDateString().ToString();
+            reg.fechaReg = DateTime.Now;
+            reg.fechaAct = DateTime.Now;
             reg.ctaBancaria = proveedor.formatoCuenta(reg.ctaBancaria);
             string msg = proveedor.registrar(reg);
             return RedirectToAction("Registrar", "Proveedor", new { mensaje = msg });
@@ -45,7 +45,7 @@ namespace SITTPR_Web.Controllers {
 
         [HttpPost]
         public ActionResult Actualizar(ProveedorEntity reg) {
-            reg.fechaAct = DateTime.Now.ToShortDateString().ToString();
+            reg.fechaAct = DateTime.Now;
 
             string msg = proveedor.actualizar(reg);
 

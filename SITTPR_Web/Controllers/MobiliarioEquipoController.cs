@@ -35,8 +35,8 @@ namespace SITTPR_Web.Controllers {
         [HttpPost]
         public ActionResult RegistrarE(EquipoEntity reg) {
             reg.codigo = equipo.generarCodigo();
-            reg.fechaReg = DateTime.Now.ToShortDateString().ToString();
-            reg.fechaAct = DateTime.Now.ToShortDateString().ToString();
+            reg.fechaReg = DateTime.Now;
+            reg.fechaAct = DateTime.Now;
             reg.estado = "EEM01";
             string msg = equipo.registrar(reg);
             return RedirectToAction("RegistrarE", "MobiliarioEquipo", new { mensaje = msg });
@@ -56,7 +56,7 @@ namespace SITTPR_Web.Controllers {
 
         [HttpPost]
         public ActionResult ActualizarE(EquipoEntity reg) {
-            reg.fechaAct = DateTime.Now.ToShortDateString().ToString();
+            reg.fechaAct = DateTime.Now;
 
             string msg = equipo.actualizar(reg);
 
@@ -76,8 +76,8 @@ namespace SITTPR_Web.Controllers {
         [HttpPost]
         public ActionResult RegistrarM(MobiliarioEntity reg) {
             reg.codigo = mobiliario.generarCodigo();
-            reg.fechaReg = DateTime.Now.ToShortDateString().ToString();
-            reg.fechaAct = DateTime.Now.ToShortDateString().ToString();
+            reg.fechaReg = DateTime.Now;
+            reg.fechaAct = DateTime.Now;
             reg.estado = "EEM01";
             string msg = mobiliario.registrar(reg);
             return RedirectToAction("RegistrarM", "MobiliarioEquipo", new { mensaje = msg });
@@ -98,7 +98,7 @@ namespace SITTPR_Web.Controllers {
 
         [HttpPost]
         public ActionResult ActualizarM(MobiliarioEntity reg) {
-            reg.fechaAct = DateTime.Now.ToShortDateString().ToString();
+            reg.fechaAct = DateTime.Now;
 
             string msg = mobiliario.actualizar(reg);
 

@@ -13,8 +13,8 @@ namespace Entidades {
         public string direccion { get; set; }
         public string telefono { get; set; }
         public string correo { get; set; }
-        public string fechaReg { get; set; }
-        public string fechaAct { get; set; }
+        public DateTime fechaReg { get; set; }
+        public DateTime fechaAct { get; set; }
         public string ctaBancaria { get; set; }
         public string pais { get; set; }
     }

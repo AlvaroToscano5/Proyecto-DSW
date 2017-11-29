@@ -67,8 +67,8 @@ namespace DAO {
                     reg.codigo = dr[0].ToString();
                     reg.descripcion = dr[1].ToString();
                     reg.cantidad = Convert.ToInt32(dr[2]);
-                    reg.fechaReg = dr[3].ToString();
-                    reg.fechaAct = dr[4].ToString();
+                    reg.fechaReg = Convert.ToDateTime(dr[3]);
+                    reg.fechaAct = Convert.ToDateTime(dr[4]);
                     reg.proveedor = dr[5].ToString();
                     reg.tipo = dr[6].ToString();
                     reg.estado = dr[7].ToString();

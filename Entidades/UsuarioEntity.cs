@@ -16,8 +16,8 @@ namespace Entidades {
         public string usuario { get; set; }
         public string contraseña { get; set; }
         public decimal saldo { get; set; }
-        public string fechaReg { get; set; }
-        public string fechaAct { get; set; }
+        public DateTime fechaReg { get; set; }
+        public DateTime fechaAct { get; set; }
         public string tipo { get; set; }
         public string estado { get; set; }
         public byte[] huella { get; set; }

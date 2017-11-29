@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Entidades {
     public class RutaEntity {
         public string codigo { get; set; }
-        public string fechaReg { get; set; }
+        public DateTime fechaReg { get; set; }
         public string turno { get; set; }
         public string placa { get; set; }
         public string horaPartida { get; set; }

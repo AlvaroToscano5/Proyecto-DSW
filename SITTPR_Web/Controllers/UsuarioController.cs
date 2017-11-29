@@ -34,8 +34,8 @@ namespace SITTPR_Web.Controllers {
             reg.usuario = usuario.generarUsuario(reg.nombre, reg.apellidos);
             reg.contraseña = reg.dni;
             reg.saldo = 0;
-            reg.fechaReg = DateTime.Now.ToShortDateString().ToString();
-            reg.fechaAct = DateTime.Now.ToShortDateString().ToString();
+            reg.fechaReg = DateTime.Now;
+            reg.fechaAct = DateTime.Now;
             reg.estado = "EEU01";
 
             string msg = usuario.registrar(reg);
@@ -55,7 +55,7 @@ namespace SITTPR_Web.Controllers {
 
         [HttpPost]
         public ActionResult Actualizar(UsuarioEntity reg) {
-            reg.fechaAct = DateTime.Now.ToShortDateString().ToString();
+            reg.fechaAct = DateTime.Now;
 
             string msg = usuario.actualizar(reg);
 

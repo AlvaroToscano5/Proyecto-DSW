@@ -34,8 +34,8 @@ namespace SITTPR_Web.Controllers {
             reg.usuario = empleado.generarUsuario(reg.nombre, reg.apellidos);
             reg.contraseña = reg.dni;
             reg.correo = reg.usuario + "@atu.com";
-            reg.fechaReg = DateTime.Now.ToShortDateString().ToString();
-            reg.fechaAct = DateTime.Now.ToShortDateString().ToString();
+            reg.fechaReg = DateTime.Now;
+            reg.fechaAct = DateTime.Now;
             reg.estado = "EEU01";
 
             string msg = empleado.registrar(reg);
@@ -57,7 +57,7 @@ namespace SITTPR_Web.Controllers {
 
         [HttpPost]
         public ActionResult Actualizar(EmpleadoEntity reg) {
-            reg.fechaAct = DateTime.Now.ToShortDateString().ToString();
+            reg.fechaAct = DateTime.Now;
 
             string msg = empleado.actualizar(reg);
 

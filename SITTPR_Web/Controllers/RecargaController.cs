@@ -23,7 +23,7 @@ namespace SITTPR_Web.Controllers {
 
             if (usuario.listar().Where(u => u.dni == rec.dni).Count() != 0) {
                 rec.codigo = recarga.generarCodigo();
-                rec.fechaReg = DateTime.Now.ToShortDateString().ToString();
+                rec.fechaReg = DateTime.Now;
 
                 UsuarioEntity reg = usuario.listar().Where(u => u.dni == rec.dni).FirstOrDefault();
 

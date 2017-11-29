@@ -9,7 +9,7 @@ namespace Entidades
     public class CobranzaEntity {
         public string codigo { get; set; }
         public int cantidad { get; set; }
-        public string fechaReg { get; set; }
+        public DateTime fechaReg { get; set; }
         public decimal monto { get; set; }
         public string tipo { get; set; }
     }
