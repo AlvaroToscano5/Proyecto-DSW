@@ -16,3 +16,12 @@ C:\Users\i201510050\Desktop\Proyecto-DSW-PII\Servicios\bin\Debug\Entidades.pdb
 C:\Users\i201510050\Desktop\Proyecto-DSW-PII\Servicios\obj\Debug\Servicios.csprojResolveAssemblyReference.cache
 C:\Users\i201510050\Desktop\Proyecto-DSW-PII\Servicios\obj\Debug\Servicios.dll
 C:\Users\i201510050\Desktop\Proyecto-DSW-PII\Servicios\obj\Debug\Servicios.pdb
+C:\Users\nahomy\Desktop\P_PROYECTO\Proyecto-DSW-PII\Servicios\bin\Debug\Servicios.dll
+C:\Users\nahomy\Desktop\P_PROYECTO\Proyecto-DSW-PII\Servicios\bin\Debug\Servicios.pdb
+C:\Users\nahomy\Desktop\P_PROYECTO\Proyecto-DSW-PII\Servicios\bin\Debug\DAO.dll
+C:\Users\nahomy\Desktop\P_PROYECTO\Proyecto-DSW-PII\Servicios\bin\Debug\Entidades.dll
+C:\Users\nahomy\Desktop\P_PROYECTO\Proyecto-DSW-PII\Servicios\bin\Debug\DAO.pdb
+C:\Users\nahomy\Desktop\P_PROYECTO\Proyecto-DSW-PII\Servicios\bin\Debug\Entidades.pdb
+C:\Users\nahomy\Desktop\P_PROYECTO\Proyecto-DSW-PII\Servicios\obj\Debug\Servicios.csprojResolveAssemblyReference.cache
+C:\Users\nahomy\Desktop\P_PROYECTO\Proyecto-DSW-PII\Servicios\obj\Debug\Servicios.dll
+C:\Users\nahomy\Desktop\P_PROYECTO\Proyecto-DSW-PII\Servicios\obj\Debug\Servicios.pdb
