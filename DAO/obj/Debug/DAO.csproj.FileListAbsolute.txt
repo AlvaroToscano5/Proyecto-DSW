@@ -12,3 +12,10 @@ C:\Users\i201510050\Desktop\Proyecto-DSW-PII\DAO\bin\Debug\Entidades.pdb
 C:\Users\i201510050\Desktop\Proyecto-DSW-PII\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
 C:\Users\i201510050\Desktop\Proyecto-DSW-PII\DAO\obj\Debug\DAO.dll
 C:\Users\i201510050\Desktop\Proyecto-DSW-PII\DAO\obj\Debug\DAO.pdb
+C:\Users\nahomy\Desktop\P_PROYECTO\Proyecto-DSW-PII\DAO\bin\Debug\DAO.dll
+C:\Users\nahomy\Desktop\P_PROYECTO\Proyecto-DSW-PII\DAO\bin\Debug\DAO.pdb
+C:\Users\nahomy\Desktop\P_PROYECTO\Proyecto-DSW-PII\DAO\bin\Debug\Entidades.dll
+C:\Users\nahomy\Desktop\P_PROYECTO\Proyecto-DSW-PII\DAO\bin\Debug\Entidades.pdb
+C:\Users\nahomy\Desktop\P_PROYECTO\Proyecto-DSW-PII\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\nahomy\Desktop\P_PROYECTO\Proyecto-DSW-PII\DAO\obj\Debug\DAO.dll
+C:\Users\nahomy\Desktop\P_PROYECTO\Proyecto-DSW-PII\DAO\obj\Debug\DAO.pdb

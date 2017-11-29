@@ -51,6 +51,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="proveedorDAO.cs" />
     <Compile Include="recargaDAO.cs" />
+    <Compile Include="reclamoDAO.cs" />
     <Compile Include="tipoDAO.cs" />
     <Compile Include="usuarioDAO.cs" />
   </ItemGroup>

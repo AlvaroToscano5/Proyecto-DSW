@@ -173,6 +173,7 @@
     <Compile Include="Controllers\MobiliarioEquipoController.cs" />
     <Compile Include="Controllers\ProveedorController.cs" />
     <Compile Include="Controllers\RecargaController.cs" />
+    <Compile Include="Controllers\ReclamoController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -256,6 +257,8 @@
     <Content Include="Views\Menu\Cajero.cshtml" />
     <Content Include="Views\Menu\Login.cshtml" />
     <Content Include="Views\Recarga\Recargar.cshtml" />
+    <Content Include="Views\Reclamo\Listar.cshtml" />
+    <Content Include="Views\Reclamo\Generar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
