@@ -51,6 +51,7 @@
     <Compile Include="EquipoEntity.cs" />
     <Compile Include="EstacionEntity.cs" />
     <Compile Include="EstadoEntity.cs" />
+    <Compile Include="EstaticosEntity.cs" />
     <Compile Include="MantenimientoEntity.cs" />
     <Compile Include="MobiliarioEntity.cs" />
     <Compile Include="PaisEntity.cs" />

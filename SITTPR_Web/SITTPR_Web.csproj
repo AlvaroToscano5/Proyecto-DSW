@@ -259,6 +259,7 @@
     <Content Include="Views\Recarga\Recargar.cshtml" />
     <Content Include="Views\Reclamo\Listar.cshtml" />
     <Content Include="Views\Reclamo\Generar.cshtml" />
+    <Content Include="Views\Menu\EncargadoP.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

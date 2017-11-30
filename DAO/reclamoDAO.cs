@@ -11,15 +11,13 @@ namespace DAO {
  public class reclamoDAO {
         conexionDAO cn = new conexionDAO();
 
-        public string generarCodigo()
-        {
+        public string generarCodigo() {
             DataTable dt = new DataTable();
             string m = "";
             string codigo = "";
             cn.getcn.Open();
 
-            try
-            {
+            try {
                 SqlCommand cmd = new SqlCommand("usp_ListarReclamo", cn.getcn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
@@ -30,55 +28,31 @@ namespace DAO {
             catch (SqlException ex) { m = ex.Message; }
             finally { cn.getcn.Close(); }
 
-            if (dt.Rows.Count < 9)
-            {
+            if (dt.Rows.Count < 9) {
                 codigo = "R00000000" + (dt.Rows.Count + 1).ToString();
-            }
-            else if (dt.Rows.Count < 99)
-            {
+            } else if (dt.Rows.Count < 99) {
                 codigo = "R0000000" + (dt.Rows.Count + 1).ToString();
-            }
-            else if (dt.Rows.Count < 999)
-            {
+            } else if (dt.Rows.Count < 999) {
                 codigo = "R000000" + (dt.Rows.Count + 1).ToString();
-            }
-            else if (dt.Rows.Count < 9999)
-            {
+            } else if (dt.Rows.Count < 9999) {
                 codigo = "R00000" + (dt.Rows.Count + 1).ToString();
-            }
-            else if (dt.Rows.Count < 99999)
-            {
+            } else if (dt.Rows.Count < 99999) {
                 codigo = "R0000" + (dt.Rows.Count + 1).ToString();
-            }
-            else if (dt.Rows.Count < 999999)
-            {
+            } else if (dt.Rows.Count < 999999) {
                 codigo = "R000" + (dt.Rows.Count + 1).ToString();
-            }
-            else if (dt.Rows.Count < 9999999)
-            {
+            } else if (dt.Rows.Count < 9999999) {
                 codigo = "R00" + (dt.Rows.Count + 1).ToString();
-            }
-            else if (dt.Rows.Count < 99999999)
-            {
+            } else if (dt.Rows.Count < 99999999) {
                 codigo = "R0" + (dt.Rows.Count + 1).ToString();
-            }
-            else if (dt.Rows.Count < 999999999)
-            {
+            } else if (dt.Rows.Count < 999999999) {
                 codigo = "R" + (dt.Rows.Count + 1).ToString();
-            }
-            else
-            {
+            } else {
                 codigo = "";
             }
 
             return codigo;
         }
-
-
-
-
-
-
+     
         public string generar(ReclamoEntity pro) {
             string m = "";
             cn.getcn.Open();
@@ -93,8 +67,7 @@ namespace DAO {
                 cmd.Parameters.AddWithValue("@tip", pro.tipo);
                 cmd.Parameters.AddWithValue("@frg", pro.fechaReg);
                 cmd.Parameters.AddWithValue("@fac", pro.fechaAct);
-                cmd.Parameters.AddWithValue("@ETR", pro.estado);
-                cmd.Parameters.AddWithValue("@etr", pro.fechaReg);
+                cmd.Parameters.AddWithValue("@etr", pro.estado);
                 cmd.Parameters.AddWithValue("@des", pro.descripcion);
                 cmd.Parameters.AddWithValue("@usu", pro.usuario);
                 cmd.Parameters.AddWithValue("@est", pro.estacion);

@@ -13,6 +13,7 @@ namespace SITTPR_Web.Controllers {
         EstacionService estacion = new EstacionService();
         AreaService area = new AreaService();
         EmpleadoService empleado = new EmpleadoService();
+        EstaticosService estaticos = new EstaticosService();
 
         public ActionResult Listar() {
             return View(empleado.listar());
@@ -21,6 +22,7 @@ namespace SITTPR_Web.Controllers {
         public ActionResult Registrar(string mensaje) {
             ViewBag.mensaje = mensaje;
 
+            ViewBag.sexo = new SelectList(estaticos.generos(), "codigo", "descripcion");
             ViewBag.tipo = new SelectList(tipo.listarTipoEmpleado(), "codigo", "descripcion");
             ViewBag.estacion = new SelectList(estacion.listarEstacion(), "codigo", "descripcion");
             ViewBag.area = new SelectList(area.listarArea(), "codigo", "descripcion");

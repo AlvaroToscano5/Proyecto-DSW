@@ -63,6 +63,8 @@ namespace SITTPR_Web.Controllers {
                 vista = "GerenteCAU";
             } if (acceso == "Cajero") {
                 vista = "Cajero";
+            } if (acceso == "EncargadoP") {
+                vista = "EncargadoP";
             }
 
             return vista;
@@ -129,6 +131,12 @@ namespace SITTPR_Web.Controllers {
         }
 
         public ActionResult Cajero(string mensaje) {
+            ViewBag.mensaje = mensaje;
+
+            return View();
+        }
+
+        public ActionResult EncargadoP(string mensaje) {
             ViewBag.mensaje = mensaje;
 
             return View();

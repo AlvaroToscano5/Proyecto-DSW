@@ -10,13 +10,16 @@ namespace Servicios {
   public  class ReclamoService {
         reclamoDAO reclamo = new reclamoDAO();
 
-        public string generar(ReclamoEntity rec) {
-            return reclamo.generar(rec);
+        public string generarCodigo() {
+            return reclamo.generarCodigo();
         }
-
+        
         public List<ReclamoEntity> listar() {
             return reclamo.listarReclamo();
         }
 
+        public string generar(ReclamoEntity rec) {
+            return reclamo.generar(rec);
+        }
     }
 }

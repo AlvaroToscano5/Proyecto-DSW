@@ -10,6 +10,8 @@ namespace SITTPR_Web.Controllers {
     public class ReclamoController : Controller {
         ReclamoService reclamo = new ReclamoService();
         UsuarioService usuario = new UsuarioService();
+        EstacionService estacion = new EstacionService();
+        EstaticosService estaticos = new EstaticosService();
 
         public ActionResult Listar() {
             return View(reclamo.listar());
@@ -18,31 +20,28 @@ namespace SITTPR_Web.Controllers {
         public ActionResult Generar(string mensaje) {
             ViewBag.mensaje = mensaje;
 
-            ViewBag.pais = new SelectList(reclamo.listar(), "codigo", "descripcion");
-            //   ViewBag.estacion = new SelectList(estacion.listar(), "codigo", "descripcion");
+            ViewBag.estacion = new SelectList(estacion.listarEstacion(), "codigo", "descripcion");
+            ViewBag.empleado = new SelectList(estaticos.empleados(), "codigo", "descripcion");
 
             return View(new ReclamoEntity());
         }
 
         [HttpPost]
-        public ActionResult Generar(ReclamoEntity reg) {
+        public ActionResult Generar(ReclamoEntity rec) {
+            rec.codigo = reclamo.generarCodigo();
 
-            UsuarioEntity usu = usuario.listar().Where(u => u.dni == reg.dni).FirstOrDefault();
+            UsuarioEntity usu = usuario.listar().Where(u => u.dni == rec.dni).FirstOrDefault();
+            
+            rec.nombre = usu.nombre;
+            rec.apellido = usu.apellidos;
+            rec.tipo = usu.tipo;
+            rec.fechaReg = DateTime.Now;
+            rec.fechaAct = DateTime.Now;
+            rec.estado = "Por Revisar";
+            rec.usuario = usu.codigo;
 
-
-            reg.usuario = usu.codigo;
-            reg.nombre = usu.nombre;
-            reg.apellido = usu.apellidos;
-            reg.tipo = usu.tipo;
-            reg.fechaReg = DateTime.Now;
-            reg.fechaAct = DateTime.Now;
-
-
-
-
-
-            string msg = reclamo.generar(reg);
-            return RedirectToAction("Generar", "Reclamo", new { mensaje = msg });
+            string msg = reclamo.generar(rec);
+            return RedirectToAction("Reclamo", "Generar", new { mensaje = msg });
         }
     }
 }

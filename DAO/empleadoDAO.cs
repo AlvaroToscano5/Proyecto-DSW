@@ -48,6 +48,7 @@ namespace DAO {
                                 case "TE009": acceso = "AsistenteCAU"; break;
                                 case "TE010": acceso = "GerenteCAU"; break;
                                 case "TE011": acceso = "Cajero"; break;
+                                case "TE012": acceso = "EncargadoP"; break;
                             }
                         } else { acceso = "Error"; }
                     } else { acceso = "Error"; }
