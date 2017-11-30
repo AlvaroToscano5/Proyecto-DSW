@@ -20,6 +20,9 @@ namespace SITTPR_Web.Controllers {
 
             ViewBag.pais = new SelectList(pais.listarPais(), "codigo", "descripcion");
 
+
+
+
             return View(new ProveedorEntity());
         }
 
