@@ -38,5 +38,9 @@ namespace Servicios {
         public string actualizarTipo(UsuarioEntity usu) {
             return usuario.actualizarTipo(usu);
         }
+
+        public string actualizarDatos(UsuarioEntity usu) {
+            return usuario.actualizarDatos(usu);
+        }
     }
 }

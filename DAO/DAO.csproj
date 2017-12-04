@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="areaDAO.cs" />
+    <Compile Include="cambioDAO.cs" />
     <Compile Include="conexionDAO.cs" />
     <Compile Include="empleadoDAO.cs" />
     <Compile Include="equipoDAO.cs" />
@@ -53,6 +54,8 @@
     <Compile Include="proveedorDAO.cs" />
     <Compile Include="recargaDAO.cs" />
     <Compile Include="reclamoDAO.cs" />
+    <Compile Include="rutaDAO.cs" />
+    <Compile Include="tarjetaDAO.cs" />
     <Compile Include="tipoDAO.cs" />
     <Compile Include="usuarioDAO.cs" />
   </ItemGroup>

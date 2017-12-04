@@ -202,5 +202,27 @@ namespace DAO {
             finally { cn.getcn.Close(); }
             return m;
         }
+
+        public string actualizarDatos(UsuarioEntity usu) {
+            string m = "";
+            cn.getcn.Open();
+
+            try {
+                SqlCommand cmd = new SqlCommand("usp_ActualizarDatosU", cn.getcn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@eda", usu.edad);
+                cmd.Parameters.AddWithValue("@usu", usu.usuario);
+                cmd.Parameters.AddWithValue("@pss", usu.contraseña);
+                cmd.Parameters.AddWithValue("@fac", usu.fechaAct);
+                cmd.Parameters.AddWithValue("@cod", usu.codigo);
+
+                cmd.ExecuteNonQuery();
+
+                m = "Registro Actualizado";
+            }
+            catch (SqlException ex) { m = ex.Message; }
+            finally { cn.getcn.Close(); }
+            return m;
+        }
     }
 }

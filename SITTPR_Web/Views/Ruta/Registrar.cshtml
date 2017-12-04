@@ -1,0 +1,85 @@
+﻿@model Entidades.RutaEntity
+
+<link href="~/Content/vistas.css" type="text/css" rel="stylesheet" />
+
+@{
+    ViewBag.Title = "Registrar";
+}
+
+<div>
+    <img class="banner" src="~/imagenes/banner.png" />
+</div>
+<div class="boton">
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="~/Ruta/Listar">Regresar</a></li>
+                <li><a href="~/Home/Index">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+
+<h1>Generar Ruta</h1>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group" style="color:white">
+            @Html.Label("Turno ", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("turno", (SelectList)ViewBag.turno, "--- Seleccionar ----", htmlAttributes : new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group" style="color:white">
+            @Html.Label("Hora Partida", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.horaPartida, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.horaPartida, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group" style="color:white">
+            @Html.Label("Tipo ", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("tipo", (SelectList)ViewBag.tipo, "--- Seleccionar ---", htmlAttributes: new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group" style="color:white">
+            @Html.Label("Empleado ", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("empleado", (SelectList)ViewBag.empleado, "--- Seleccionar ---", htmlAttributes: new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group" style="color:white">
+            @Html.Label("Equipo", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("Equipo", (SelectList)ViewBag.equipo, "--- Seleccionar ---", htmlAttributes: new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Generar" class="btn btn-default" />
+                <a href="~/Ruta/Listar" class="btn btn-default">Regresar</a>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<script>
+    if ('@ViewBag.mensaje' != '')
+        alert('@ViewBag.mensaje')
+</script>

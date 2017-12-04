@@ -1,0 +1,107 @@
+﻿@model Entidades.UsuarioEntity
+
+<link href="~/Content/vistas.css" type="text/css" rel="stylesheet" />
+
+@{
+    ViewBag.Title = "PerfilU";
+}
+
+<div>
+    <img class="banner" src="~/imagenes/banner.png" />
+</div>
+<div class="boton">
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="javascript:window.history.back();">Regresar</a></li>
+                <li><a href="~/Home/Index">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+
+<h1>Mi Perfil</h1>
+
+<div>
+    <hr />
+    <dl style="color:white" class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Codigo")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Dni")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dni)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Nombre")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Apellidos")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellidos)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Sexo")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sexo)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Edad")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.edad)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Nacionalidad")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nacionalidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Usuario")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Contraseña")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contraseña)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @using (Html.BeginForm()) {
+        <input type="text" value="@Model.codigo" hidden="hidden" />
+        <input class="btn btn-default" type="submit" value="Actualizar Datos" />
+    }
+</p>

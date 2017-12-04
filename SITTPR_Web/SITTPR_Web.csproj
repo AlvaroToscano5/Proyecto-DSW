@@ -167,6 +167,7 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\CambioController.cs" />
     <Compile Include="Controllers\EmpleadoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
@@ -174,6 +175,7 @@
     <Compile Include="Controllers\ProveedorController.cs" />
     <Compile Include="Controllers\RecargaController.cs" />
     <Compile Include="Controllers\ReclamoController.cs" />
+    <Compile Include="Controllers\RutaController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -285,6 +287,15 @@
     <Content Include="Views\Menu\LoginU.cshtml" />
     <Content Include="Views\Menu\Perfil.cshtml" />
     <Content Include="Views\Empleado\ActualizarDatos.cshtml" />
+    <Content Include="Views\Menu\PerfilU.cshtml" />
+    <Content Include="Views\Usuario\ActualizarDatos.cshtml" />
+    <Content Include="Views\Recarga\RecargarU.cshtml" />
+    <Content Include="Views\Ruta\Registrar.cshtml" />
+    <Content Include="Views\Ruta\Listar.cshtml" />
+    <Content Include="Views\Cambio\Compra.cshtml" />
+    <Content Include="Views\Cambio\Index.cshtml" />
+    <Content Include="Views\Cambio\ListarEquipo.cshtml" />
+    <Content Include="Views\Cambio\Select.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

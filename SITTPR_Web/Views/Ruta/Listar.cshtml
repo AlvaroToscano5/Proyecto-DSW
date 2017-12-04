@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Entidades.RutaEntity>
+
+<link href="~/Content/vistas.css" type="text/css" rel="stylesheet" />
+
+@{
+    ViewBag.Title = "Listar";
+}
+
+<div>
+    <img class="banner" src="~/imagenes/banner.png" />
+</div>
+<div class="boton">
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="~/Home/Index">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+
+<h1>Hojas de Ruta</h1>
+
+<p>
+    @Html.ActionLink("Generar Ruta", "Registrar")
+</p>
+<table class="table">
+    <tr style="color:white">
+        <th>
+            @Html.DisplayName("Código")
+        </th>
+        <th>
+            @Html.DisplayName("Turno")
+        </th>
+        <th>
+            @Html.DisplayName("Placa")
+        </th>
+        <th>
+            @Html.DisplayName("Hora Partida")
+        </th>
+        <th>
+            @Html.DisplayName("Tipo")
+        </th>
+        <th>
+            @Html.DisplayName("Chofer")
+        </th>
+        <th>
+            @Html.DisplayName("Equipo de Transporte")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr style="color:white">
+        <td>
+            @Html.DisplayFor(modelItem => item.codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.turno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.placa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.horaPartida)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.empleado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.equipo)
+        </td>
+    </tr>
+}
+
+</table>

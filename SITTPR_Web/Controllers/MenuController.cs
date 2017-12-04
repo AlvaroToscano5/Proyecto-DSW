@@ -85,6 +85,7 @@ namespace SITTPR_Web.Controllers {
             string vista = vistas(acceso);
             string msg = "";
             string nom = "";
+            string cod = "";
 
             if (acceso == "Error") {
                 msg = "Credenciales Incorrectas";
@@ -94,9 +95,10 @@ namespace SITTPR_Web.Controllers {
                 UsuarioEntity usu = usuario.listar().Where(u => u.usuario == reg.usuario).FirstOrDefault();
                 msg = "Bienvenido: " + usu.nombre + " " + usu.apellidos;
                 nom = usu.nombre + " " + usu.apellidos;
+                cod = usu.codigo;
             }
 
-            return RedirectToAction("Usuario", "Menu", new { mensaje = msg, nombre = nom });
+            return RedirectToAction("Usuario", "Menu", new { mensaje = msg, nombre = nom, codigo = cod });
         }
 
         public ActionResult Administrador(string mensaje, string codigo) {
@@ -307,10 +309,16 @@ namespace SITTPR_Web.Controllers {
             return RedirectToAction("ActualizarDatos", "Empleado", new { id = emp.codigo });
         }
 
-        public ActionResult PerfilU(string codigo) {
+        public ActionResult PerfilU(string codigo, string titulo) {
+            ViewBag.vista = titulo;
             UsuarioEntity usu = usuario.listar().Where(u => u.codigo == codigo).FirstOrDefault();
 
             return View(usu);
+        }
+
+        [HttpPost]
+        public ActionResult PerfilU(UsuarioEntity usu) {
+            return RedirectToAction("ActualizarDatos", "Usuario", new { id = usu.codigo });
         }
     }
 }

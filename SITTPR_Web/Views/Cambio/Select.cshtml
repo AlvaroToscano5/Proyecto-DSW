@@ -1,0 +1,54 @@
+﻿@model Entidades.MobiliarioEntity
+
+@{
+    ViewBag.Title = "Select";
+}
+
+<div>
+    <h4>Mobiliario Seleccionado</h4>
+    <hr />
+    <dl class="dl-horizontal" >
+
+        <dt> Código: </dt>
+
+        <dd> @Html.DisplayFor(model => model.codigo) </dd>
+
+        <dt> Nombre: </dt>
+
+        <dd> @Html.DisplayFor(model => model.descripcion) </dd>
+
+        <dt> Cantidad: </dt>
+
+        <dd> @Html.DisplayFor(model => model.cantidad) </dd>
+
+        <dt> Fecha de Registro: </dt>
+
+        <dd> @Html.DisplayFor(model => model.fechaReg) </dd>
+
+        <dt> Fecha de Actualización: </dt>
+
+        <dd> @Html.DisplayFor(model => model.fechaAct) </dd>
+
+        <dt> Proveedor: </dt>
+
+        <dd> @Html.DisplayFor(model => model.proveedor) </dd>
+
+        <dt> Código Tipo: </dt>
+
+        <dd> @Html.DisplayFor(model => model.tipo) </dd>
+
+        <dt> Código Estado: </dt>
+
+        <dd> @Html.DisplayFor(model => model.estado) </dd>
+
+        <dt> Código Estación: </dt>
+
+        <dd> @Html.DisplayFor(model => model.estacion) </dd>
+
+    </dl>
+</div>
+
+<p>
+    @Html.ActionLink("Agregar", "Agregar", new { codigo = Model.codigo }) |
+    @Html.ActionLink("Regresar", "Index")
+</p>

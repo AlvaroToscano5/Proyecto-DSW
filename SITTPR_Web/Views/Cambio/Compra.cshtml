@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Entidades.DetMobCambio>
+
+@{
+    ViewBag.Title = "Compra";
+}
+
+<h2>Compra</h2>
+
+<p>
+    @Html.ActionLink("Grabar Cambio ", "Grabar")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombreMob)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tipoMob)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estacionMob)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.codigoMob)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.codigoCambio)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombreMob)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipoMob)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estacionMob)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.codigoMob)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.codigoCambio)
+        </td>
+        <td>            
+            @Html.ActionLink("Delete", "Delete", new { id = item.codigoMob})
+        </td>
+    </tr>
+}
+
+</table>

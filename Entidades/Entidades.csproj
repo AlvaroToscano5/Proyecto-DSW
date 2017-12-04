@@ -60,6 +60,7 @@
     <Compile Include="RecargaEntity.cs" />
     <Compile Include="ReclamoEntity.cs" />
     <Compile Include="RutaEntity.cs" />
+    <Compile Include="TarjetasEntity.cs" />
     <Compile Include="TipoEntity.cs" />
     <Compile Include="TransbordoEntity.cs" />
     <Compile Include="UsuarioEntity.cs" />

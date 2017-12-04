@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AreaService.cs" />
+    <Compile Include="CambioService.cs" />
     <Compile Include="EmpleadoService.cs" />
     <Compile Include="EquipoService.cs" />
     <Compile Include="EstacionService.cs" />
@@ -52,6 +53,8 @@
     <Compile Include="ProveedorService.cs" />
     <Compile Include="RecargaService.cs" />
     <Compile Include="ReclamoService.cs" />
+    <Compile Include="RutaService.cs" />
+    <Compile Include="TarjetasService.cs" />
     <Compile Include="TipoService.cs" />
     <Compile Include="UsuarioService.cs" />
   </ItemGroup>

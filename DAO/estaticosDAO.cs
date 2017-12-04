@@ -63,5 +63,24 @@ namespace DAO {
             finally { cn.getcn.Close(); }
             return lista;
         }
+
+        public List<EstaticosEntity> turno() {
+            List<EstaticosEntity> lista = new List<EstaticosEntity>();
+            EstaticosEntity turno1 = new EstaticosEntity();
+            turno1.codigo = "Mañana";
+            turno1.descripcion = "Mañana";
+            lista.Add(turno1);
+            EstaticosEntity turno2 = new EstaticosEntity();
+            turno2.codigo = "Tarde";
+            turno2.descripcion = "Tarde";
+            lista.Add(turno2);
+            EstaticosEntity turno3 = new EstaticosEntity();
+            turno3.codigo = "Noche";
+            turno3.descripcion = "Noche";
+            lista.Add(turno3);
+
+            return lista;
+        }
+
     }
 }

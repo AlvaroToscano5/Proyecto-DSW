@@ -22,5 +22,9 @@ namespace Servicios {
         public List<EstaticosEntity> empleados() {
             return estaticos.empleados();
         }
+
+        public List<EstaticosEntity> turno() {
+            return estaticos.turno();
+        }
     }
 }
