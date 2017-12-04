@@ -1,13 +1,28 @@
 ﻿@model IEnumerable<Entidades.UsuarioEntity>
 
+<link href="~/Content/vistas.css" type="text/css" rel="stylesheet" />
+
 @{
     ViewBag.Title = "ListarCaja";
 }
 
-<h2>Usuarios</h2>
+<div>
+    <img class="banner" src="~/imagenes/banner.png" />
+</div>
+<div class="boton">
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="~/Home/Index">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+
+<h1>Usuarios</h1>
 
 <table class="table">
-    <tr>
+    <tr style="color:white">
         <th>
             @Html.DisplayName("Código")
         </th>
@@ -27,7 +42,7 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
+    <tr style="color:white">
         <td>
             @Html.DisplayFor(modelItem => item.codigo)
         </td>

@@ -1,10 +1,26 @@
 ﻿@model Entidades.EmpleadoEntity
 
+<link href="~/Content/vistas.css" type="text/css" rel="stylesheet" />
+
 @{
     ViewBag.Title = "Actualizar";
 }
 
-<h2>Actualizar Empleado</h2>
+<div>
+    <img class="banner" src="~/imagenes/banner.png" />
+</div>
+<div class="boton">
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="~/Empleado/Listar">Regresar</a></li>
+                <li><a href="~/Home/Index">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+
+<h1>Actualizar Empleado</h1>
 
 
 @using (Html.BeginForm())
@@ -22,7 +38,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" style="color:white">
             @Html.Label("Dni ", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.dni, new { htmlAttributes = new { @class = "form-control" } })
@@ -30,7 +46,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" style="color:white">
             @Html.Label("Nombre ", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control" } })
@@ -38,7 +54,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" style="color:white">
             @Html.Label("Apellidos ", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.apellidos, new { htmlAttributes = new { @class = "form-control" } })
@@ -46,7 +62,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" style="color:white">
             @Html.Label("Sexo ", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.sexo, new { htmlAttributes = new { @class = "form-control" } })
@@ -54,7 +70,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" style="color:white">
             @Html.Label("Correo ", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.correo, new { htmlAttributes = new { @class = "form-control" } })
@@ -62,7 +78,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" style="color:white">
             @Html.Label("Edad ", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.edad, new { htmlAttributes = new { @class = "form-control" } })
@@ -70,7 +86,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" style="color:white">
             @Html.Label("Dirección", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.direccion, new { htmlAttributes = new { @class = "form-control" } })
@@ -78,7 +94,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" style="color:white">
             @Html.Label("Teléfono", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.telefono, new { htmlAttributes = new { @class = "form-control" } })
@@ -86,28 +102,28 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" style="color:white">
             @Html.Label("Área", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("area", (SelectList)ViewBag.areaEmp, htmlAttributes: new { @class = "form-control" })
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" style="color:white">
             @Html.Label("Tipo ", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("tipo", (SelectList)ViewBag.tipoEmp, htmlAttributes: new { @class = "form-control" })
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" style="color:white">
             @Html.Label("Estado ", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("estado", (SelectList)ViewBag.estadoEmp, htmlAttributes: new { @class = "form-control" })
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" style="color:white">
             @Html.Label("Estación", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("estacion", (SelectList)ViewBag.estacionEmp, htmlAttributes: new { @class = "form-control" })
@@ -117,14 +133,11 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Actualizar" class="btn btn-default" />
+                <a href="~/Empleado/Listar" class="btn btn-default">Regresar</a>
             </div>
         </div>
     </div>
 }
-
-<div>
-    @Html.ActionLink("Regresar a Lista", "Listar")
-</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

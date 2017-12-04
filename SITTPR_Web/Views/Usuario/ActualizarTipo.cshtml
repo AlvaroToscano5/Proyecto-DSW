@@ -1,10 +1,26 @@
 ﻿@model Entidades.UsuarioEntity
 
+<link href="~/Content/vistas.css" type="text/css" rel="stylesheet" />
+
 @{
     ViewBag.Title = "ActualizarTipo";
 }
 
-<h2>Actualizar Tipo de Usuario</h2>
+<div>
+    <img class="banner" src="~/imagenes/banner.png" />
+</div>
+<div class="boton">
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="~/Usuario/ListarCaja">Regresar</a></li>
+                <li><a href="~/Home/Index">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+
+<h1>Actualizar Tipo de Usuario</h1>
 
 
 @using (Html.BeginForm())
@@ -22,7 +38,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" style="color:white">
             @Html.Label("Tipo ", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("tipo", (SelectList)ViewBag.tipoUsu, htmlAttributes: new { @class = "form-control" })
@@ -32,14 +48,11 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Actualizar" class="btn btn-default" />
+                <a href="~/Usuario/ListarCaja" class="btn btn-default">Regresar</a>
             </div>
         </div>
     </div>
 }
-
-<div>
-    @Html.ActionLink("Regresar a Lista", "ListarCaja")
-</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

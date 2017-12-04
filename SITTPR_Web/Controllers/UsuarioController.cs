@@ -11,6 +11,7 @@ namespace SITTPR_Web.Controllers {
         UsuarioService usuario = new UsuarioService();
         TipoService tipo = new TipoService();
         EstadoService estado = new EstadoService();
+        EstaticosService estaticos = new EstaticosService();
 
         public ActionResult Listar() {
             return View(usuario.listar());
@@ -23,6 +24,7 @@ namespace SITTPR_Web.Controllers {
         public ActionResult Registrar(string mensaje) {
             ViewBag.mensaje = mensaje;
 
+            ViewBag.sexo = new SelectList(estaticos.generos(), "codigo", "descripcion");
             ViewBag.tipo = new SelectList(tipo.listarTipoUsuario(), "codigo", "descripcion");
 
             return View(new UsuarioEntity());
