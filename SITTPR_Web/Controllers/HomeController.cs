@@ -22,5 +22,14 @@ namespace SITTPR_Web.Controllers {
 
             return View();
         }
+
+        public ActionResult Prueba() {
+            return View();
+        }
+
+        public ActionResult Hola()
+        {
+            return View();
+        }
     }
 }

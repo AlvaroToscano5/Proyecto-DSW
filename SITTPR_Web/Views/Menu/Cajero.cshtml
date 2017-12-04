@@ -1,16 +1,31 @@
-﻿
+﻿<link href="~/Content/vistas.css" type="text/css" rel="stylesheet" />
+
 @{
     ViewBag.Title = "Cajero";
 }
-
 <div>
-    <h1>Caja</h1>
+    <img class="banner" src="~/imagenes/banner.png" />
 </div>
-<hr />
+<div class="boton">
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="~/Home/Index">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+<hr style="width:1130px" />
+<div>
+    <h1 align="center">Caja</h1>
+</div>
+<hr style="width:1130px" />
 <br />
 <div align="center">
-    <a href="~/Recarga/Recargar"><img src="~/imagenes/recargar.png"/></a>
-    <a href="~/Usuario/ListarCaja"><img src="~/imagenes/tipo.png" /></a>
+    <a href="~/Recarga/Recargar"><img src="~/imagenes/recargar.png"/></a> 
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <a href="~/Usuario/ListarCaja"><img src="~/imagenes/tipo.png" /></a>   
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
     <a href="~/Reclamo/Generar"><img src="~/imagenes/reclamo.png" /></a>
 </div>
 

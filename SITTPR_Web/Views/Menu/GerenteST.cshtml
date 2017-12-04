@@ -1,19 +1,32 @@
-﻿
+﻿<link href="~/Content/vistas.css" type="text/css" rel="stylesheet" />
+
 @{
     ViewBag.Title = "GerenteST";
 }
-
 <div>
-    <h1>Servicio Técnico</h1>
+    <img class="banner" src="~/imagenes/banner.png" />
 </div>
-<hr />
+<div class="boton">
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="~/Home/Index">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+<hr style="width:1130px" />
+<div>
+    <h1 align="center">Servicio Técnico</h1>
+</div>
+<hr style="width:1130px" />
 <br />
 <div align="center">
-    <a href="~/MobiliarioEquipo/ListarM"><img src="~/imagenes/mobiliario.png" /></a>
-    <a href="~/MobiliarioEquipo/ListarE"><img src="~/imagenes/equipo.png" /></a>
-    <a href="~/"><img src="~/imagenes/mantenimiento.png" /></a>
-    <a href="~/"><img src="~/imagenes/cambio.png" /></a>
-    <a href="~/"><img src="~/imagenes/reporte.png" /></a>
+    <a href="~/MobiliarioEquipo/ListarM"><img style="width:180px; height:180px" src="~/imagenes/mobiliario.png" /></a>
+    <a href="~/MobiliarioEquipo/ListarE"><img style="width:180px; height:180px" src="~/imagenes/equipo.png" /></a>
+    <a href="~/"><img style="width:180px; height:180px" src="~/imagenes/mantenimiento.png" /></a>
+    <a href="~/"><img style="width:180px; height:180px" src="~/imagenes/cambio.png" /></a>
+    <a href="~/"><img style="width:180px; height:180px" src="~/imagenes/reporte.png" /></a>
 </div>
 
 @section Scripts {

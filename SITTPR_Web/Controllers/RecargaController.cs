@@ -32,7 +32,6 @@ namespace SITTPR_Web.Controllers {
             } else {
                 msg = "Dni Ingresado, No Existe";
             }
-
             
             return RedirectToAction("Recargar", "Recarga", new { mensaje = msg });
         }

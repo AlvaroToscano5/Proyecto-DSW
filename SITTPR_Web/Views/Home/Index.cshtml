@@ -1,31 +1,99 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿
+@{
+    Layout = null;
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<!DOCTYPE html>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link href="~/Content/flexslider.css" type="text/css" rel="stylesheet">
+    <link href="~/Content/menu.css" type="text/css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="~/Scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript" charset="utf-8">
+  $(window).load(function() {
+    $('.flexslider').flexslider({
+    	touch: true,
+    	pauseOnAction: false,
+        pauseOnHover: false,
+        slideshowSpeed: 4000, 
+        animationSpeed: 500,
+    });
+  });
+    </script>
+</head>
+<body>
+    <div class="flexslider">
+        <ul class="slides">
+            <li>
+                <img src="~/imagenes/banner.png" alt="">
+            </li>
+            <li>
+                <img src="~/imagenes/metropolitano.png" alt="">
+                <section class="flex-caption">
+                    <p>Metropolitano</p>
+                </section>
+            </li>
+            <li>
+                <img src="~/imagenes/metrodelima.png" alt="">
+                <section class="flex-caption">
+                    <p>Metro de Lima</p>
+                </section>
+            </li>
+            <li>
+                <img src="~/imagenes/corredores.png" alt="">
+                <section class="flex-caption">
+                    <p>Corredor</p>
+                </section>
+            </li>
+        </ul>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+
+    <header>
+        <nav class="menu">
+            <ul>
+                <li><a style="font-family:'Comic Sans MS'; text-decoration:none; color:black" href="~/Home/Index">Inicio</a></li>
+                <li>Metropolitano
+                    <ul>
+                        <li>Rutas
+                            <ul>
+                                <li>Troncal</li>
+                                <li>Alimentadoras</li>
+                            </ul>
+                        </li>
+                        <li>Conoce Más</li>
+                    </ul>
+                </li>
+                <li>Corredor de Lima
+                    <ul>
+                        <li>Rutas
+                            <ul>
+                                <li>Corredor Azul</li>
+                                <li>Corredor Rojo</li>
+                                <li>Corredor Naranja</li>
+                            </ul>
+                        </li>
+                        <li>Conoce Más</li>
+                    </ul>
+                </li>
+                <li>Metro de Lima
+                    <ul>
+                        <li>Rutas</li>
+                        <li>Conoce Más</li>
+                    </ul>
+                </li>
+                <li>Iniciar Sesión
+                    <ul>
+                        <li>Usuario</li>
+                        <li><a style="font-family:'Comic Sans MS'; text-decoration:none; color:white" href="~/Menu/Login">Colaborador</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

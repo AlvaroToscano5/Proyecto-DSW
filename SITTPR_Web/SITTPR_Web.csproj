@@ -188,14 +188,23 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\estilos.css" />
+    <Content Include="Content\flexslider.css" />
+    <Content Include="Content\menu.css" />
+    <Content Include="Content\normalize.css" />
+    <Content Include="Content\vistas.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\flexslider-icon.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="imagenes\banner.png" />
     <Content Include="imagenes\cambio.png" />
+    <Content Include="imagenes\corredores.png" />
     <Content Include="imagenes\empleado.png" />
     <Content Include="imagenes\equipo.png" />
     <Content Include="imagenes\mantenimiento.png" />
+    <Content Include="imagenes\metrodelima.png" />
+    <Content Include="imagenes\metropolitano.png" />
     <Content Include="imagenes\mobiliario.png" />
     <Content Include="imagenes\proveedor.png" />
     <Content Include="imagenes\recargar.png" />
@@ -206,10 +215,17 @@
     <Content Include="imagenes\usuario.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="fonts\flexslider-icon.eot" />
+    <Content Include="fonts\flexslider-icon.ttf" />
+    <Content Include="fonts\flexslider-icon.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\jquery.flexslider-min.js" />
+    <Content Include="Scripts\jquery.flexslider.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -227,13 +243,9 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Shared\Lockout.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Empleado\Registrar.cshtml" />
     <Content Include="Views\Empleado\Actualizar.cshtml" />
     <Content Include="Views\Empleado\Listar.cshtml" />
@@ -262,11 +274,12 @@
     <Content Include="Views\Menu\AsistenteCAU.cshtml" />
     <Content Include="Views\Menu\GerenteCAU.cshtml" />
     <Content Include="Views\Menu\Cajero.cshtml" />
-    <Content Include="Views\Menu\Login.cshtml" />
     <Content Include="Views\Recarga\Recargar.cshtml" />
     <Content Include="Views\Reclamo\Listar.cshtml" />
     <Content Include="Views\Reclamo\Generar.cshtml" />
     <Content Include="Views\Menu\EncargadoP.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Menu\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

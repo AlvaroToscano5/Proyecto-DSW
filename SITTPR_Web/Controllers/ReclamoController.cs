@@ -41,7 +41,7 @@ namespace SITTPR_Web.Controllers {
             rec.usuario = usu.codigo;
 
             string msg = reclamo.generar(rec);
-            return RedirectToAction("Reclamo", "Generar", new { mensaje = msg });
+            return RedirectToAction("Generar", "Reclamo", new { mensaje = msg });
         }
     }
 }
