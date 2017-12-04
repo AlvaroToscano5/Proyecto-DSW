@@ -11,6 +11,10 @@ namespace Servicios {
     public class UsuarioService {
         usuarioDAO usuario = new usuarioDAO();
 
+        public string iniciarSesion(string user, string contraseña) {
+            return usuario.iniciarSesion(user, contraseña);
+        }
+
         public string generarCodigo() {
             return usuario.generarCodigo();
         }

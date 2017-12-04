@@ -11,7 +11,7 @@ namespace DAO {
     public class empleadoDAO {
         conexionDAO cn = new conexionDAO();
 
-        public string iniciarSesion(String usuario, String contraseña) {
+        public string iniciarSesion(string usuario, string contraseña) {
             DataTable dt = new DataTable();
             string m = "";
             string acceso = "";
@@ -222,6 +222,30 @@ namespace DAO {
                 cmd.Parameters.AddWithValue("@teu", emp.estado);
                 cmd.Parameters.AddWithValue("@est", emp.estacion);
                 cmd.Parameters.AddWithValue("@are", emp.area);
+                cmd.Parameters.AddWithValue("@cod", emp.codigo);
+
+                cmd.ExecuteNonQuery();
+
+                m = "Registro Actualizado";
+            }
+            catch (SqlException ex) { m = ex.Message; }
+            finally { cn.getcn.Close(); }
+            return m;
+        }
+
+        public string actualizarDatos(EmpleadoEntity emp) {
+            string m = "";
+            cn.getcn.Open();
+
+            try {
+                SqlCommand cmd = new SqlCommand("usp_ActualizarDatos", cn.getcn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@eda", emp.edad);
+                cmd.Parameters.AddWithValue("@dir", emp.direccion);
+                cmd.Parameters.AddWithValue("@tel", emp.telefono);
+                cmd.Parameters.AddWithValue("@usu", emp.usuario);
+                cmd.Parameters.AddWithValue("@pss", emp.contraseña);
+                cmd.Parameters.AddWithValue("@fac", emp.fechaAct);
                 cmd.Parameters.AddWithValue("@cod", emp.codigo);
 
                 cmd.ExecuteNonQuery();

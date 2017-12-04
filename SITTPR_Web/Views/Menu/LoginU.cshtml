@@ -1,4 +1,4 @@
-﻿@model Entidades.EmpleadoEntity
+﻿@model Entidades.UsuarioEntity
 
 @{
     Layout = null;
@@ -8,13 +8,13 @@
 
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="~/Content/estilos.css">
 </head>
-<body>
-    @using (Html.BeginForm()){
+<body style="background-image:url(../imagenes/personas.png); background-repeat:no-repeat; background-position:center; background-size:1400px">
+    @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
         
         <div class="login">
@@ -30,7 +30,7 @@
                 @Html.EditorFor(model => model.contraseña, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.usuario, "", new { @class = "text-danger" })
             </div>
-    
+
             <p class="text-center">
                 <button class="btn btn-primary btn-block">Login</button>
             </p>

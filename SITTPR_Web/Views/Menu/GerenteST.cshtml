@@ -10,7 +10,13 @@
     <header>
         <nav>
             <ul class="menu">
-                <li><a href="#">Mi Perfil</a></li>
+                <li>
+                    @using (Html.BeginForm())
+                    {
+                        <input type="text" value="@ViewBag.codigo" hidden="hidden" />
+                        <input style="font-family:'Open sans'" class="btn-link" type="submit" value="Mi Perfil" />
+                    }
+                </li>
                 <li><a href="~/Home/Index">Cerrar Sesión</a></li>
             </ul>
         </nav>

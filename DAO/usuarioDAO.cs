@@ -11,6 +11,34 @@ namespace DAO {
     public class usuarioDAO {
         conexionDAO cn = new conexionDAO();
 
+        public string iniciarSesion(string usuario, string contraseña) {
+            DataTable dt = new DataTable();
+            string m = "";
+            string acceso = "";
+            cn.getcn.Open();
+
+            try {
+                SqlCommand cmd = new SqlCommand("usp_IniciarSesionU", cn.getcn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@USU", usuario);
+                cmd.Parameters.AddWithValue("@PSS", contraseña);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                da.Fill(dt);
+            }
+            catch (SqlException ex) { m = ex.Message; }
+            finally { cn.getcn.Close(); }
+
+            if (dt.Rows.Count == 1) {
+                if (dt.Rows[0][0].ToString() == "EEU01") {
+                    acceso = "Usuario";
+                } else { acceso = "Inactivo"; }
+            } else { acceso = "Error"; }
+
+            return acceso;
+        }
+
         public string generarCodigo() {
             DataTable dt = new DataTable();
             string m = "";

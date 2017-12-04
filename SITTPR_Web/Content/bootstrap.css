@@ -2295,10 +2295,9 @@ fieldset[disabled] .btn-info.active {
 }
 
 .btn-link {
-  font-weight: normal;
-  color: #428bca;
-  cursor: pointer;
-  border-radius: 0;
+    color: #58b813;
+    cursor: pointer;
+    border-radius: 0;
 }
 
 .btn-link,
@@ -2310,27 +2309,26 @@ fieldset[disabled] .btn-link {
           box-shadow: none;
 }
 
-.btn-link,
-.btn-link:hover,
-.btn-link:focus,
-.btn-link:active {
-  border-color: transparent;
-}
+    .btn-link,
+    .btn-link:hover,
+    .btn-link:focus,
+    .btn-link:active {
+        border-color: transparent;
+    }
 
-.btn-link:hover,
-.btn-link:focus {
-  color: #2a6496;
-  text-decoration: underline;
-  background-color: transparent;
-}
+        .btn-link:hover,
+        .btn-link:focus {
+            color: #ffffff;
+            background-color: transparent;
+        }
 
-.btn-link[disabled]:hover,
-fieldset[disabled] .btn-link:hover,
-.btn-link[disabled]:focus,
-fieldset[disabled] .btn-link:focus {
-  color: #999999;
-  text-decoration: none;
-}
+        .btn-link[disabled]:hover,
+        fieldset[disabled] .btn-link:hover,
+        .btn-link[disabled]:focus,
+        fieldset[disabled] .btn-link:focus {
+            color: #ffffff;
+            text-decoration: none;
+        }
 
 .btn-lg {
   padding: 10px 16px;

@@ -11,7 +11,7 @@ namespace Servicios {
     public class EmpleadoService {
         empleadoDAO empleado = new empleadoDAO();
 
-        public string iniciarSesion(String usuario, String contraseña) {
+        public string iniciarSesion(string usuario, string contraseña) {
             return empleado.iniciarSesion(usuario, contraseña);
         }
 
@@ -33,6 +33,10 @@ namespace Servicios {
 
         public string actualizar(EmpleadoEntity emp) {
             return empleado.actualizar(emp);
+        }
+
+        public string actualizarDatos(EmpleadoEntity emp) {
+            return empleado.actualizarDatos(emp);
         }
     }
 }

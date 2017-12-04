@@ -1,23 +1,16 @@
 ﻿<link href="~/Content/vistas.css" type="text/css" rel="stylesheet" />
 
 @{
-    ViewBag.Title = "EncargadoP";
+    ViewBag.Title = "Usuario";
 }
-
 <div>
-    <img class="banner" src="~/imagenes/banner.png" />
+    <img class="banner" src="~/imagenes/personas.png" />
 </div>
 <div class="boton">
     <header>
         <nav>
             <ul class="menu">
-                <li>
-                    @using (Html.BeginForm())
-                    {
-                        <input type="text" value="@ViewBag.codigo" hidden="hidden" />
-                        <input style="font-family:'Open sans'" class="btn-link" type="submit" value="Mi Perfil" />
-                    }
-                </li>
+                <li><a href="#">Mi Perfil</a></li>
                 <li><a href="~/Home/Index">Cerrar Sesión</a></li>
             </ul>
         </nav>
@@ -25,13 +18,14 @@
 </div>
 <hr style="width:1130px" />
 <div>
-    <h1 align="center">Planeamiento</h1>
+    <h1 align="center">@ViewBag.nombre</h1>
 </div>
 <hr style="width:1130px" />
 <br />
 <div align="center">
-    <a href="~/Ruta/Listar"><img src="~/imagenes/ruta.png" /></a>
-
+    <a href="~/"><img src="~/imagenes/recargar.png" /></a>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <a href="~/"><img src="~/imagenes/reporte.png" /></a>
 </div>
 
 @section Scripts {

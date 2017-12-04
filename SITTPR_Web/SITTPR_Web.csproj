@@ -206,6 +206,7 @@
     <Content Include="imagenes\metrodelima.png" />
     <Content Include="imagenes\metropolitano.png" />
     <Content Include="imagenes\mobiliario.png" />
+    <Content Include="imagenes\personas.png" />
     <Content Include="imagenes\proveedor.png" />
     <Content Include="imagenes\recargar.png" />
     <Content Include="imagenes\reclamo.png" />
@@ -280,6 +281,10 @@
     <Content Include="Views\Menu\EncargadoP.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Menu\Login.cshtml" />
+    <Content Include="Views\Menu\Usuario.cshtml" />
+    <Content Include="Views\Menu\LoginU.cshtml" />
+    <Content Include="Views\Menu\Perfil.cshtml" />
+    <Content Include="Views\Empleado\ActualizarDatos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

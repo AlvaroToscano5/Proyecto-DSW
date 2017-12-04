@@ -65,5 +65,22 @@ namespace SITTPR_Web.Controllers {
 
             return RedirectToAction("Actualizar", "Empleado", new { mensaje = msg });
         }
+
+        public ActionResult ActualizarDatos(string mensaje, string id) {
+            ViewBag.mensaje = mensaje;
+
+            EmpleadoEntity reg = empleado.listar().Where(e => e.codigo == id).FirstOrDefault();
+
+            return View(reg);
+        }
+
+        [HttpPost]
+        public ActionResult ActualizarDatos(EmpleadoEntity reg) {
+            reg.fechaAct = DateTime.Now;
+
+            string msg = empleado.actualizarDatos(reg);
+
+            return RedirectToAction("Perfil", "Menu", new { mensaje = msg, codigo = reg.codigo });
+        }
     }
 }
