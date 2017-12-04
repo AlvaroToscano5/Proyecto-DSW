@@ -1,13 +1,29 @@
 ﻿@model Entidades.MobiliarioEntity
 
+<link href="~/Content/vistas.css" type="text/css" rel="stylesheet" />
+
 @{
     ViewBag.Title = "Select";
 }
 
 <div>
-    <h4>Mobiliario Seleccionado</h4>
+    <img class="banner" src="~/imagenes/banner.png" />
+</div>
+<div class="boton">
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="javascript:window.history.back();">Regresar</a></li>
+                <li><a href="~/Home/Index">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+
+<div>
+    <h1>Mobiliario Seleccionado</h1>
     <hr />
-    <dl class="dl-horizontal" >
+    <dl  style="color:white" class="dl-horizontal" >
 
         <dt> Código: </dt>
 
@@ -49,6 +65,6 @@
 </div>
 
 <p>
-    @Html.ActionLink("Agregar", "Agregar", new { codigo = Model.codigo }) |
-    @Html.ActionLink("Regresar", "Index")
+    @Html.ActionLink("Agregar", "Agregar", new { codigo = Model.codigo }, htmlAttributes: new { @class = "btn btn-default" })
+    <a class="btn btn-default" href="javascript:window.history.back();">Regresar</a>
 </p>

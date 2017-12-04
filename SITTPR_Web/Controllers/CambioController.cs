@@ -10,7 +10,7 @@ namespace SITTPR_Web.Controllers {
     public class CambioController : Controller  {
         CambioService cambio = new CambioService();
                         
-        public ActionResult Index(){
+        public ActionResult ListarM(){
             if (Session["carrito"] == null)
             {
                 Session["carrito"] = new List<DetMobCambio>();
@@ -45,10 +45,10 @@ namespace SITTPR_Web.Controllers {
             List<DetMobCambio> carrito = (List<DetMobCambio>)Session["carrito"];
             carrito.Add(item);
 
-            return RedirectToAction("Index");
+            return RedirectToAction("ListarM");
         }
 
-        public ActionResult Compra() {
+        public ActionResult Cambio() {
             if (Session["carrito"] == null) {
                 return View("Index");
             } else {                
@@ -67,7 +67,7 @@ namespace SITTPR_Web.Controllers {
         }
 
 
-        public ActionResult ListarEquipo() {
+        public ActionResult ListarE() {
             if (Session["cambioE"] == null) {
                 Session["cambioE"] = new List<DetEqCambio>();
             }

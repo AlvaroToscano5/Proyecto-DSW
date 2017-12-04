@@ -1,16 +1,31 @@
 ﻿@model IEnumerable<Entidades.DetMobCambio>
 
+<link href="~/Content/vistas.css" type="text/css" rel="stylesheet" />
+
 @{
     ViewBag.Title = "Compra";
 }
 
-<h2>Compra</h2>
+<div>
+    <img class="banner" src="~/imagenes/banner.png" />
+</div>
+<div class="boton">
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="~/Home/Index">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+
+<h1>Cambio</h1>
 
 <p>
     @Html.ActionLink("Grabar Cambio ", "Grabar")
 </p>
 <table class="table">
-    <tr>
+    <tr style="color:white">
         <th>
             @Html.DisplayNameFor(model => model.nombreMob)
         </th>
@@ -23,14 +38,11 @@
         <th>
             @Html.DisplayNameFor(model => model.codigoMob)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.codigoCambio)
-        </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
+    <tr style="color:white">
         <td>
             @Html.DisplayFor(modelItem => item.nombreMob)
         </td>
@@ -42,9 +54,6 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.codigoMob)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.codigoCambio)
         </td>
         <td>            
             @Html.ActionLink("Delete", "Delete", new { id = item.codigoMob})

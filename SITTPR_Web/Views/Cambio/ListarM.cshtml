@@ -1,5 +1,7 @@
 ﻿@model IEnumerable<Entidades.MobiliarioEntity>
 
+<link href="~/Content/vistas.css" type="text/css" rel="stylesheet" />
+
 <style>
     .divresumen {
         text-align: right;
@@ -11,14 +13,27 @@
     ViewBag.Title = "Listar Mobiliarios";
 }
 
-<h2>Mobiliarios</h2>
+<div>
+    <img class="banner" src="~/imagenes/banner.png" />
+</div>
+<div class="boton">
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="~/Home/Index">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
 
-<p> @Html.ActionLink("Realizar Cambio", "Compra") </p>
+<h1>Mobiliarios</h1>
+
+<p> @Html.ActionLink("Realizar Cambio", "Cambio") </p>
 <div class="divresumen">
     <p>Ud ha seleccionado:@ViewBag.contador mobiliarios</p>
 </div>
 <table class="table">
-    <tr>
+    <tr style="color:white">
         <th> Código del Mobiliario</th>        
         <th> Nombre </th>
         <th> Código del Tipo </th>
@@ -28,7 +43,7 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
+    <tr style="color:white">
         <td> @Html.DisplayFor(modelItem => item.codigo) </td>
         <td> @Html.DisplayFor(modelItem => item.descripcion) </td>
         <td> @Html.DisplayFor(modelItem => item.tipo) </td>

@@ -32,6 +32,7 @@ namespace SITTPR_Web.Controllers {
 		public ActionResult Registrar(RutaEntity ru) {
             ru.codigo = ruta.generarCodigo();
             ru.fechaReg = DateTime.Now;
+            ru.horaPartida = ru.horaPartida + ".00";
 
             EquipoEntity reg = equipo.listar().Where(e => e.codigo == ru.equipo).FirstOrDefault();
 

@@ -292,9 +292,9 @@
     <Content Include="Views\Recarga\RecargarU.cshtml" />
     <Content Include="Views\Ruta\Registrar.cshtml" />
     <Content Include="Views\Ruta\Listar.cshtml" />
-    <Content Include="Views\Cambio\Compra.cshtml" />
-    <Content Include="Views\Cambio\Index.cshtml" />
-    <Content Include="Views\Cambio\ListarEquipo.cshtml" />
+    <Content Include="Views\Cambio\Cambio.cshtml" />
+    <Content Include="Views\Cambio\ListarM.cshtml" />
+    <Content Include="Views\Cambio\ListarE.cshtml" />
     <Content Include="Views\Cambio\Select.cshtml" />
   </ItemGroup>
   <ItemGroup>
