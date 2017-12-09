@@ -171,6 +171,7 @@
     <Compile Include="Controllers\CambioController.cs" />
     <Compile Include="Controllers\EmpleadoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MantenimientoController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\MobiliarioEquipoController.cs" />
     <Compile Include="Controllers\ProveedorController.cs" />
@@ -248,8 +249,6 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Empleado\Registrar.cshtml" />
     <Content Include="Views\Empleado\Actualizar.cshtml" />
     <Content Include="Views\Empleado\Listar.cshtml" />
@@ -300,8 +299,21 @@
     <Content Include="Views\MobiliarioEquipo\ReporteM.cshtml" />
     <Content Include="Views\Empleado\ReporteE.cshtml" />
     <Content Include="Views\Usuario\ReporteU.cshtml" />
-    <Content Include="Views\Reclamo\ReporteR.cshtml" />
+    <Content Include="Views\Reclamo\Reporte.cshtml" />
     <Content Include="Views\MobiliarioEquipo\ReporteMDC.cshtml" />
+    <Content Include="Views\Home\Troncal.cshtml" />
+    <Content Include="Views\Home\Alimentadores.cshtml" />
+    <Content Include="Views\Home\AboutMetropolitano.cshtml" />
+    <Content Include="Views\Home\CorredorAzul.cshtml" />
+    <Content Include="Views\Home\CorredorRojo.cshtml" />
+    <Content Include="Views\Home\CorredorMorado.cshtml" />
+    <Content Include="Views\Home\AboutCorredores.cshtml" />
+    <Content Include="Views\Home\Rutas.cshtml" />
+    <Content Include="Views\Home\AboutTren.cshtml" />
+    <Content Include="Views\Reclamo\ActualizarEstado.cshtml" />
+    <Content Include="Views\Mantenimiento\ListarM.cshtml" />
+    <Content Include="Views\Mantenimiento\Select.cshtml" />
+    <Content Include="Views\Mantenimiento\Mantenimiento.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

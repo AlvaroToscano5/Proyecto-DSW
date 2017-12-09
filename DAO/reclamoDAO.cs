@@ -114,19 +114,16 @@ namespace DAO {
             return lista;
         }
 
-        public List<ReclamoEntity> reporteReclamos(string est)
-        {
+        public List<ReclamoEntity> reporteReclamos() {
             string m = "";
             List<ReclamoEntity> lista = new List<ReclamoEntity>();
             cn.getcn.Open();
 
-            try
-            {
-                SqlCommand cmd = new SqlCommand("usp_ReporteClamos", cn.getcn);
+            try {
+                SqlCommand cmd = new SqlCommand("usp_ReporteReclamos", cn.getcn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 SqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
+                while (dr.Read()) {
                     ReclamoEntity reg = new ReclamoEntity();
                     reg.codigo = dr[0].ToString();
                     reg.dni = dr[1].ToString();

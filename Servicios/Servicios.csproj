@@ -47,6 +47,7 @@
     <Compile Include="EstacionService.cs" />
     <Compile Include="EstadoService.cs" />
     <Compile Include="EstaticosService.cs" />
+    <Compile Include="MantenimientoService.cs" />
     <Compile Include="MobiliarioService.cs" />
     <Compile Include="PaisService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

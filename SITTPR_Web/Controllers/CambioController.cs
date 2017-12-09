@@ -48,12 +48,20 @@ namespace SITTPR_Web.Controllers {
             return RedirectToAction("ListarM");
         }
 
-        public ActionResult Cambio() {
+        public ActionResult Cambio(string mensaje) {
+            ViewBag.mensaje = mensaje;
+
             if (Session["carrito"] == null) {
                 return View("Index");
             } else {                
                 return View((List<DetMobCambio>)Session["carrito"]);
             }
+        }
+
+        [HttpPost]
+        public ActionResult Cambio() {
+            string msg = "Cambio Realizado con Exito";
+            return RedirectToAction("Cambio", "Cambio", new { mensaje = msg });
         }
 
         public ActionResult Delete(String codigo) {            
@@ -65,7 +73,6 @@ namespace SITTPR_Web.Controllers {
             listado.Remove(reg);
             return RedirectToAction("Compra");
         }
-
 
         public ActionResult ListarE() {
             if (Session["cambioE"] == null) {

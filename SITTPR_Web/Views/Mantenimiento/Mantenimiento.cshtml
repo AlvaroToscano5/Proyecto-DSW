@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Entidades.DetMobCambio>
+﻿@model IEnumerable<Entidades.DetMobMantenimiento>
 
 <link href="~/Content/vistas.css" type="text/css" rel="stylesheet" />
 
@@ -19,12 +19,13 @@
     </header>
 </div>
 
-<h1>Cambio</h1>
+<h1>Mantenimiento</h1>
 
 <p>
-@using (Html.BeginForm()){
-    <input class="btn btn-default" type="submit" value="Grabar"/>
-}
+    @using (Html.BeginForm())
+    {
+        <input class="btn btn-default" type="submit" value="Grabar" />
+    }
 </p>
 <table class="table">
     <tr style="color:white">
@@ -60,8 +61,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.codigoMob)
         </td>
-        <td>            
-            @Html.ActionLink("Delete", "Delete", new { id = item.codigoMob})
+      
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id = item.codigoMob })
         </td>
     </tr>
 }

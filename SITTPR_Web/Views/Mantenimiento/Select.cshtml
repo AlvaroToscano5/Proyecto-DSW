@@ -1,0 +1,105 @@
+﻿@model Entidades.MobiliarioEntity
+
+<link href="~/Content/vistas.css" type="text/css" rel="stylesheet" />
+
+@{
+    ViewBag.Title = "Select";
+}
+
+<div>
+    <img class="banner" src="~/imagenes/banner.png" />
+</div>
+
+<div class="boton">
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="javascript:window.history.back();">Regresar</a></li>
+                <li><a href="~/Home/Index">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+
+<div>
+    <h1>Mobiliario Seleccionado</h1>
+    <hr />
+    <dl  style="color:white" class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaReg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaReg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaAct)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaAct)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.proveedor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.proveedor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estacion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Agregar", "Agregar", new { codigo = Model.codigo }, htmlAttributes: new { @class = "btn btn-default" })
+    <a class="btn btn-default" href="javascript:window.history.back();">Regresar</a>
+</p>

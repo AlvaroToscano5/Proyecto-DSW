@@ -11,24 +11,44 @@ namespace SITTPR_Web.Controllers {
             return View();
         }
 
-        public ActionResult About() {
+        public ActionResult Troncal() {
             ViewBag.Message = "Your application description page.";
 
             return View();
         }
 
-        public ActionResult Contact() {
+        public ActionResult Alimentadores() {
             ViewBag.Message = "Your contact page.";
 
             return View();
         }
 
-        public ActionResult Prueba() {
+        public ActionResult AboutMetropolitano() {
             return View();
         }
 
-        public ActionResult Hola()
+        public ActionResult CorredorAzul()
         {
+            return View();
+        }
+
+        public ActionResult CorredorRojo() {
+            return View();
+        }
+
+        public ActionResult CorredorMorado() {
+            return View();
+        }
+
+        public ActionResult AboutCorredores() {
+            return View();
+        }
+
+        public ActionResult Rutas() {
+            return View();
+        }
+
+        public ActionResult AboutTren() {
             return View();
         }
     }

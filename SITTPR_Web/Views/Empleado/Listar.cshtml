@@ -24,7 +24,8 @@
 <p>
     @Html.ActionLink("Registrar Empleado", "Registrar")
 </p>
-<table class="table">
+<table class="table table-hover table-dark">
+    <thead>
     <tr style="color:white">
         <th>
             @Html.DisplayName("Código")
@@ -73,7 +74,7 @@
         </th>
         <th></th>
     </tr>
-
+</thead>
 @foreach (var item in Model) {
     <tr style="color:white">
         <td>

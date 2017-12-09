@@ -1,0 +1,106 @@
+﻿@model IEnumerable<Entidades.ReclamoEntity>
+
+<link href="~/Content/vistas.css" type="text/css" rel="stylesheet" />
+
+@{
+    ViewBag.Title = "Reporte";
+}
+
+<h1>Reporte de Reclamos</h1>
+
+<br />
+@using (Html.BeginForm()) {
+<div class="form-horizontal">
+    <div class="form-group" style="color:white">
+        <h4 style="margin:15px">Escoger Estación</h4>
+        <div class="col-md-10">
+            @Html.DropDownList("est", (SelectList)ViewBag.estacion, "--- Seleccionar ---", htmlAttributes: new { @class = "form-control" })
+        </div>
+    </div>
+    <input class="btn btn-default" type="submit" value="Consultar"/>
+    <a class="btn btn-default" href="~/Reclamo/Reporte">Ver data</a>
+</div>
+}
+<br />
+
+<table class="table table-hover table-dark">
+    <thead>
+        <tr style="color:white">
+            <th>
+                @Html.DisplayName("Código ")
+            </th>
+            <th>
+                @Html.DisplayName("Dni ")
+            </th>
+            <th>
+                @Html.DisplayName("Nombre")
+            </th>
+            <th>
+                @Html.DisplayName("Apellido")
+            </th>
+            <th>
+                @Html.DisplayName("Tipo Usuario")
+            </th>
+            <th>
+                @Html.DisplayName("Fecha de Registro")
+            </th>
+            <th>
+                @Html.DisplayName("Fecha de Actualización")
+            </th>
+            <th>
+                @Html.DisplayName("Estado")
+            </th>
+            <th>
+                @Html.DisplayName("Descripción")
+            </th>
+            <th>
+                @Html.DisplayName("Estación")
+            </th>
+            <th>
+                @Html.DisplayName("Empleado")
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+@foreach (var item in Model) {
+    <tr style="color:white">
+        <td>
+            @Html.DisplayFor(modelItem => item.codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dni)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apellido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaReg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaAct)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.empleado)
+        </td>
+        <td>
+            @Html.ActionLink("Actualizar", "ActualizarEstado", new { id = item.codigo })
+        </td>
+    </tr>
+}
+
+</table>

@@ -44,10 +44,34 @@ namespace SITTPR_Web.Controllers {
             return RedirectToAction("Generar", "Reclamo", new { mensaje = msg });
         }
 
-        public ActionResult ReporteR(string est)
-        {
+        public ActionResult Reporte(string est, string fechaIni, string fechaFin) {
+            ViewBag.est = est;
+            List<ReclamoEntity> lista = reclamo.reporteReclamos().Where(r => r.estacion == est).ToList();
+            ViewBag.estacion = new SelectList(estacion.listarEstacion(), "codigo", "descripcion");
 
-            return View();
+            if (est == null) {
+                return View(reclamo.reporteReclamos());
+            }
+            else {
+                return View(lista);
+            }
+        }
+
+        public ActionResult ActualizarEstado(string mensaje, string id) {
+            ViewBag.mensaje = mensaje;
+
+            ReclamoEntity reg = reclamo.listar().Where(e => e.codigo == id).FirstOrDefault();
+
+            ViewBag.estado = new SelectList(estaticos.estadosReclamos(), "codigo", "descripcion", reg.tipo);
+
+            return View(reg);
+        }
+
+        [HttpPost]
+        public ActionResult ActualizarEstado(UsuarioEntity reg) {
+            string msg = usuario.actualizarTipo(reg);
+
+            return RedirectToAction("ActualizarEstado", "Reclamo", new { mensaje = msg });
         }
 
     }

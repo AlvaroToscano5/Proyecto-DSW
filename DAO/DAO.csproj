@@ -48,6 +48,7 @@
     <Compile Include="estacionDAO.cs" />
     <Compile Include="estadoDAO.cs" />
     <Compile Include="estaticosDAO.cs" />
+    <Compile Include="mantenimientoDAO.cs" />
     <Compile Include="mobiliarioDAO.cs" />
     <Compile Include="paisDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
