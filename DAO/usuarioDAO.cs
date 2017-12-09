@@ -224,5 +224,43 @@ namespace DAO {
             finally { cn.getcn.Close(); }
             return m;
         }
+
+        public List<UsuarioEntity> reporteUsuarios(string tip, string est)
+        {
+            string m = "";
+            List<UsuarioEntity> lista = new List<UsuarioEntity>();
+            cn.getcn.Open();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("usp_ReporteUsuarios", cn.getcn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    UsuarioEntity reg = new UsuarioEntity();
+                    reg.codigo = dr[0].ToString();
+                    reg.dni = dr[1].ToString();
+                    reg.nombre = dr[2].ToString();
+                    reg.apellidos = dr[3].ToString();
+                    reg.sexo = dr[4].ToString();
+                    reg.edad = Convert.ToInt32(dr[5]);
+                    reg.nacionalidad = dr[6].ToString();
+                    reg.usuario = dr[7].ToString();
+                    reg.contraseña = dr[8].ToString();
+                    reg.saldo = Convert.ToDecimal(dr[9]);
+                    reg.fechaReg = Convert.ToDateTime(dr[10]);
+                    reg.fechaAct = Convert.ToDateTime(dr[11]);
+                    reg.tipo = dr[12].ToString();
+                    reg.estado = dr[13].ToString();
+                    /*reg.huella = (byte[])dr[14];*/
+                    lista.Add(reg);
+                }
+            }
+            catch (SqlException ex) { m = ex.Message; }
+            finally { cn.getcn.Close(); }
+            return lista;
+        }
+
     }
 }

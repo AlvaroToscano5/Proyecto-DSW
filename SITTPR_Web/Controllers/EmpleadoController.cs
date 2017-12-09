@@ -82,5 +82,14 @@ namespace SITTPR_Web.Controllers {
 
             return RedirectToAction("Perfil", "Menu", new { mensaje = msg, codigo = reg.codigo });
         }
+
+        public ActionResult ReporteE(string tip, string est)
+        {
+            ViewBag.estado = new SelectList(estado.listarEstadoEmpUsu(), "codigo", "descripcion", est);
+            ViewBag.tipo = new SelectList(tipo.listarTipoEmpleado(), "codigo", "descripcion", tip);
+
+            return View(empleado.reporteEmpleado(est, tip));
+        }
+
     }
 }

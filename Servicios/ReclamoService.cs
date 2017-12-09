@@ -21,5 +21,11 @@ namespace Servicios {
         public string generar(ReclamoEntity rec) {
             return reclamo.generar(rec);
         }
+
+        public List<ReclamoEntity> reporteReclamos(string est)
+        {
+            return reclamo.reporteReclamos(est);
+        }
+
     }
 }

@@ -131,5 +131,38 @@ namespace DAO {
             finally { cn.getcn.Close(); }
             return m;
         }
+
+        public List<MobiliarioEntity> reporteMobiliario(string est, string tip)
+        {
+            string m = "";
+            List<MobiliarioEntity> lista = new List<MobiliarioEntity>();
+            cn.getcn.Open();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("usp_ReporteMobiliario", cn.getcn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    MobiliarioEntity reg = new MobiliarioEntity();
+                    reg.codigo = dr[0].ToString();
+                    reg.descripcion = dr[1].ToString();
+                    reg.cantidad = Convert.ToInt32(dr[2]);
+                    reg.fechaReg = Convert.ToDateTime(dr[3]);
+                    reg.fechaAct = Convert.ToDateTime(dr[4]);
+                    reg.proveedor = dr[5].ToString();
+                    reg.tipo = dr[6].ToString();
+                    reg.estado = dr[7].ToString();
+                    reg.estacion = dr[8].ToString();
+                    lista.Add(reg);
+                }
+            }
+            catch (SqlException ex) { m = ex.Message; }
+            finally { cn.getcn.Close(); }
+            return lista;
+        }
+
+
     }
 }

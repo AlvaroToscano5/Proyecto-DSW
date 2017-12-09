@@ -42,5 +42,11 @@ namespace Servicios {
         public string actualizarDatos(UsuarioEntity usu) {
             return usuario.actualizarDatos(usu);
         }
+
+        public List<UsuarioEntity> reporteUsuarios(string tip,string est)
+        {
+            return usuario.reporteUsuarios(tip, est);
+        }
+
     }
 }

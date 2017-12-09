@@ -104,5 +104,22 @@ namespace SITTPR_Web.Controllers {
 
             return RedirectToAction("ActualizarM", "MobiliarioEquipo", new { mensaje = msg });
         }
+
+        public ActionResult ReporteM(string est, string tip)
+        {
+            ViewBag.estado = new SelectList(estado.listarEstadoMobEquip(), "codigo", "descripcion",est);
+            ViewBag.tipo = new SelectList(tipo.listarTipoEqMob(), "codigo", "descripcion", tip);
+
+            return View(mobiliario.reporte(est, tip));
+        }
+
+        public ActionResult ReporteMDC(string est, string tip)
+        {
+            ViewBag.estado = new SelectList(estado.listarEstadoOperativo(), "codigo", "descripcion", est);
+            ViewBag.tipo = new SelectList(tipo.listarTipoEqMob(), "codigo", "descripcion", tip);
+
+            return View(mobiliario.reporte(est, tip));
+        }
+
     }
 }

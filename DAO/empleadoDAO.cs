@@ -256,5 +256,45 @@ namespace DAO {
             finally { cn.getcn.Close(); }
             return m;
         }
+
+        public List<EmpleadoEntity> reporteEmpleado(string tip, string est)
+        {
+            string m = "";
+            List<EmpleadoEntity> lista = new List<EmpleadoEntity>();
+            cn.getcn.Open();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("usp_ReporteEmpleados", cn.getcn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    EmpleadoEntity reg = new EmpleadoEntity();
+                    reg.codigo = dr[0].ToString();
+                    reg.dni = dr[1].ToString();
+                    reg.nombre = dr[2].ToString();
+                    reg.apellidos = dr[3].ToString();
+                    reg.sexo = dr[4].ToString();
+                    reg.correo = dr[5].ToString();
+                    reg.edad = Convert.ToInt32(dr[6]);
+                    reg.direccion = dr[7].ToString();
+                    reg.telefono = dr[8].ToString();
+                    reg.usuario = dr[9].ToString();
+                    reg.contraseña = dr[10].ToString();
+                    reg.fechaReg = Convert.ToDateTime(dr[11]);
+                    reg.fechaAct = Convert.ToDateTime(dr[12]);
+                    reg.tipo = dr[13].ToString();
+                    reg.estado = dr[14].ToString();
+                    reg.estacion = dr[15].ToString();
+                    reg.area = dr[16].ToString();
+                    lista.Add(reg);
+                }
+            }
+            catch (SqlException ex) { m = ex.Message; }
+            finally { cn.getcn.Close(); }
+            return lista;
+        }
+
     }
 }

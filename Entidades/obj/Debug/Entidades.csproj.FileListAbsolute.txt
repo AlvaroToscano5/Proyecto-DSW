@@ -18,3 +18,9 @@ C:\Users\nahomy\Desktop\P_PROYECTO\Proyecto-DSW-PII\Entidades\bin\Debug\Entidade
 C:\Users\nahomy\Desktop\P_PROYECTO\Proyecto-DSW-PII\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
 C:\Users\nahomy\Desktop\P_PROYECTO\Proyecto-DSW-PII\Entidades\obj\Debug\Entidades.dll
 C:\Users\nahomy\Desktop\P_PROYECTO\Proyecto-DSW-PII\Entidades\obj\Debug\Entidades.pdb
+C:\Users\RENATO\Desktop\Proyecto_DSW1\Proyecto-DSW-PII\Entidades\bin\Debug\Entidades.dll
+C:\Users\RENATO\Desktop\Proyecto_DSW1\Proyecto-DSW-PII\Entidades\bin\Debug\Entidades.pdb
+C:\Users\RENATO\Desktop\Proyecto_DSW1\Proyecto-DSW-PII\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+C:\Users\RENATO\Desktop\Proyecto_DSW1\Proyecto-DSW-PII\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\RENATO\Desktop\Proyecto_DSW1\Proyecto-DSW-PII\Entidades\obj\Debug\Entidades.dll
+C:\Users\RENATO\Desktop\Proyecto_DSW1\Proyecto-DSW-PII\Entidades\obj\Debug\Entidades.pdb

@@ -52,5 +52,30 @@ namespace DAO {
             finally { cn.getcn.Close(); }
             return lista;
         }
+
+        public List<EstadoEntity> listarEstadoOperativo()
+        {
+            string m = "";
+            List<EstadoEntity> lista = new List<EstadoEntity>();
+            cn.getcn.Open();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("usp_EstadoOperativo", cn.getcn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    EstadoEntity reg = new EstadoEntity();
+                    reg.codigo = dr["codigo"].ToString();
+                    reg.descripcion = dr["descripcion"].ToString();
+                    lista.Add(reg);
+                }
+            }
+            catch (SqlException ex) { m = ex.Message; }
+            finally { cn.getcn.Close(); }
+            return lista;
+        }
+
     }
 }

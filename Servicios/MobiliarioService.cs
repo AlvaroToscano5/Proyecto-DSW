@@ -26,5 +26,10 @@ namespace Servicios {
         public string actualizar(MobiliarioEntity mob) {
             return mobiliario.actualizar(mob);
         }
+
+        public List<MobiliarioEntity> reporte(string est, string tip)
+        {
+            return mobiliario.reporteMobiliario(est, tip);
+        }
     }
 }

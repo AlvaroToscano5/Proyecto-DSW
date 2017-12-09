@@ -38,5 +38,10 @@ namespace Servicios {
         public string actualizarDatos(EmpleadoEntity emp) {
             return empleado.actualizarDatos(emp);
         }
+
+        public List<EmpleadoEntity> reporteEmpleado(string tip, string est)
+        {
+            return empleado.reporteEmpleado(tip, est);
+        }
     }
 }

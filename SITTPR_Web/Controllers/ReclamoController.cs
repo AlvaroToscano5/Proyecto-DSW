@@ -43,5 +43,12 @@ namespace SITTPR_Web.Controllers {
             string msg = reclamo.generar(rec);
             return RedirectToAction("Generar", "Reclamo", new { mensaje = msg });
         }
+
+        public ActionResult ReporteR(string est)
+        {
+
+            return View();
+        }
+
     }
 }

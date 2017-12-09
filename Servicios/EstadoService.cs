@@ -18,5 +18,10 @@ namespace Servicios {
         public List<EstadoEntity> listarEstadoMobEquip() {
             return estado.listarEstadoMobEquip();
         }
+        public List<EstadoEntity> listarEstadoOperativo()
+        {
+            return estado.listarEstadoOperativo();
+        }
+
     }
 }

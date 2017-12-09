@@ -19,3 +19,11 @@ C:\Users\nahomy\Desktop\P_PROYECTO\Proyecto-DSW-PII\DAO\bin\Debug\Entidades.pdb
 C:\Users\nahomy\Desktop\P_PROYECTO\Proyecto-DSW-PII\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
 C:\Users\nahomy\Desktop\P_PROYECTO\Proyecto-DSW-PII\DAO\obj\Debug\DAO.dll
 C:\Users\nahomy\Desktop\P_PROYECTO\Proyecto-DSW-PII\DAO\obj\Debug\DAO.pdb
+C:\Users\RENATO\Desktop\Proyecto_DSW1\Proyecto-DSW-PII\DAO\bin\Debug\DAO.dll
+C:\Users\RENATO\Desktop\Proyecto_DSW1\Proyecto-DSW-PII\DAO\bin\Debug\DAO.pdb
+C:\Users\RENATO\Desktop\Proyecto_DSW1\Proyecto-DSW-PII\DAO\bin\Debug\Entidades.dll
+C:\Users\RENATO\Desktop\Proyecto_DSW1\Proyecto-DSW-PII\DAO\bin\Debug\Entidades.pdb
+C:\Users\RENATO\Desktop\Proyecto_DSW1\Proyecto-DSW-PII\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\RENATO\Desktop\Proyecto_DSW1\Proyecto-DSW-PII\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\RENATO\Desktop\Proyecto_DSW1\Proyecto-DSW-PII\DAO\obj\Debug\DAO.dll
+C:\Users\RENATO\Desktop\Proyecto_DSW1\Proyecto-DSW-PII\DAO\obj\Debug\DAO.pdb
