@@ -35,3 +35,12 @@ C:\Users\RENATO\Desktop\Proyecto_DSW1\Proyecto-DSW-PII\Servicios\obj\Debug\Servi
 C:\Users\RENATO\Desktop\Proyecto_DSW1\Proyecto-DSW-PII\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
 C:\Users\RENATO\Desktop\Proyecto_DSW1\Proyecto-DSW-PII\Servicios\obj\Debug\Servicios.dll
 C:\Users\RENATO\Desktop\Proyecto_DSW1\Proyecto-DSW-PII\Servicios\obj\Debug\Servicios.pdb
+C:\Users\i201510050\Desktop\Proyecto\Proyecto-DSW-PII\Servicios\bin\Debug\Servicios.dll
+C:\Users\i201510050\Desktop\Proyecto\Proyecto-DSW-PII\Servicios\bin\Debug\Servicios.pdb
+C:\Users\i201510050\Desktop\Proyecto\Proyecto-DSW-PII\Servicios\bin\Debug\DAO.dll
+C:\Users\i201510050\Desktop\Proyecto\Proyecto-DSW-PII\Servicios\bin\Debug\Entidades.dll
+C:\Users\i201510050\Desktop\Proyecto\Proyecto-DSW-PII\Servicios\bin\Debug\DAO.pdb
+C:\Users\i201510050\Desktop\Proyecto\Proyecto-DSW-PII\Servicios\bin\Debug\Entidades.pdb
+C:\Users\i201510050\Desktop\Proyecto\Proyecto-DSW-PII\Servicios\obj\Debug\Servicios.csprojResolveAssemblyReference.cache
+C:\Users\i201510050\Desktop\Proyecto\Proyecto-DSW-PII\Servicios\obj\Debug\Servicios.dll
+C:\Users\i201510050\Desktop\Proyecto\Proyecto-DSW-PII\Servicios\obj\Debug\Servicios.pdb

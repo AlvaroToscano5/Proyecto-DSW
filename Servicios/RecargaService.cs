@@ -18,5 +18,9 @@ namespace Servicios {
         public string recargar(RecargaEntity rec) {
             return recarga.recargar(rec);
         }
+
+        public List<RecargaEntity> reporteRecargas() {
+            return recarga.reporteRecargas();
+        }
     }
 }

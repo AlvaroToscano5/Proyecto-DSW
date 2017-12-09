@@ -27,3 +27,10 @@ C:\Users\RENATO\Desktop\Proyecto_DSW1\Proyecto-DSW-PII\DAO\obj\Debug\DAO.csprojR
 C:\Users\RENATO\Desktop\Proyecto_DSW1\Proyecto-DSW-PII\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
 C:\Users\RENATO\Desktop\Proyecto_DSW1\Proyecto-DSW-PII\DAO\obj\Debug\DAO.dll
 C:\Users\RENATO\Desktop\Proyecto_DSW1\Proyecto-DSW-PII\DAO\obj\Debug\DAO.pdb
+C:\Users\i201510050\Desktop\Proyecto\Proyecto-DSW-PII\DAO\bin\Debug\DAO.dll
+C:\Users\i201510050\Desktop\Proyecto\Proyecto-DSW-PII\DAO\bin\Debug\DAO.pdb
+C:\Users\i201510050\Desktop\Proyecto\Proyecto-DSW-PII\DAO\bin\Debug\Entidades.dll
+C:\Users\i201510050\Desktop\Proyecto\Proyecto-DSW-PII\DAO\bin\Debug\Entidades.pdb
+C:\Users\i201510050\Desktop\Proyecto\Proyecto-DSW-PII\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\i201510050\Desktop\Proyecto\Proyecto-DSW-PII\DAO\obj\Debug\DAO.dll
+C:\Users\i201510050\Desktop\Proyecto\Proyecto-DSW-PII\DAO\obj\Debug\DAO.pdb

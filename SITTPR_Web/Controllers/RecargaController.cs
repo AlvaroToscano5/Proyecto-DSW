@@ -73,5 +73,10 @@ namespace SITTPR_Web.Controllers {
         public ActionResult Validar(TarjetasEntity reg, List<RecargaEntity> lista) {
             return RedirectToAction("");
         }
+
+        public ActionResult Reporte() {
+            List<RecargaEntity> lista = recarga.reporteRecargas().ToList();
+            return View(lista);
+        }
     }
 }

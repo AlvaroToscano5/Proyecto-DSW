@@ -98,5 +98,28 @@ namespace DAO {
 
             return m;
         }
+
+        public List<RecargaEntity> reporteRecargas() {
+            string m = "";
+            List<RecargaEntity> lista = new List<RecargaEntity>();
+            cn.getcn.Open();
+
+            try {
+                SqlCommand cmd = new SqlCommand("usp_ListarRecarga", cn.getcn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read()) {
+                    RecargaEntity reg = new RecargaEntity();
+                    reg.codigo = dr[0].ToString();
+                    reg.monto = Convert.ToDecimal(dr[1]);
+                    reg.fechaReg = Convert.ToDateTime(dr[2]);
+                    reg.dni = dr[3].ToString();
+                    lista.Add(reg);
+                }
+            }
+            catch (SqlException ex) { m = ex.Message; }
+            finally { cn.getcn.Close(); }
+            return lista;
+        }
     }
 }

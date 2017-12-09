@@ -314,6 +314,7 @@
     <Content Include="Views\Mantenimiento\ListarM.cshtml" />
     <Content Include="Views\Mantenimiento\Select.cshtml" />
     <Content Include="Views\Mantenimiento\Mantenimiento.cshtml" />
+    <Content Include="Views\Recarga\Reporte.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

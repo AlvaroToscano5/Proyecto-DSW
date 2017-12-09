@@ -1,16 +1,40 @@
-﻿
+﻿<link href="~/Content/vistas.css" type="text/css" rel="stylesheet" />
+
 @{
     ViewBag.Title = "Administrador";
 }
-
-<h2>Administrador</h2>
-
-
+<div>
+    <img class="banner" src="~/imagenes/banner.png" />
+</div>
+<div class="boton">
+    <header>
+        <nav>
+            <ul class="menu">
+                <li>
+                    @using (Html.BeginForm())
+                    {
+                        <input type="text" value="@ViewBag.codigo" hidden="hidden" />
+                        <input style="font-family:'Open sans'" class="btn-link" type="submit" value="Mi Perfil" />
+                    }
+                </li>
+                <li><a href="~/Home/Index">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+<hr style="width:1130px" />
+<div>
+    <h1 align="center">Administrador</h1>
+</div>
+<hr style="width:1130px" />
+<br />
+<div align="center">
+    <a href="~/Recarga/Reporte"><img src="~/imagenes/reporte.png" /></a>
+</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
-
 
 <script>
     if ('@ViewBag.mensaje' != '')

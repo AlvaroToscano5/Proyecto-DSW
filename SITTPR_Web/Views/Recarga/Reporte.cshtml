@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Entidades.RecargaEntity>
+
+<link href="~/Content/vistas.css" type="text/css" rel="stylesheet" />
+
+@{
+    ViewBag.Title = "Reporte";
+}
+
+<div>
+    <img style="width:1250px;height:300px" class="banner" src="~/imagenes/banner.png" />
+</div>
+<div class="boton" style="width:1250px">
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="~/Home/Index">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+
+<h1>Reporte Recargas</h1>
+
+<table class="table table-hover table-dark">
+    <thead>
+    <tr style="color:white">
+        <th>
+            @Html.DisplayNameFor(model => model.codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.monto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaReg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dni)
+        </th>
+    </tr>
+    </thead>
+@foreach (var item in Model) {
+    <tr style="color:white">
+        <td>
+            @Html.DisplayFor(modelItem => item.codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.monto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaReg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dni)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.usuario)
+        </td>
+    </tr>
+}
+
+</table>
